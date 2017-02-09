@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Test&amp;Target Mbox"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <name
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Mbox Name"
+            name="./jcr:title"
+            xtype="textfield"/>
+        <mboxType
+            jcr:primaryType="cq:Widget"
+            columns="{Long}1"
+            fieldLabel="Mbox Type"
+            name="./cq:mboxtype"
+            xtype="radiogroup">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <default
+                    jcr:primaryType="cq:Widget"
+                    checked="{Boolean}true"
+                    fieldDescription="AJAX on Author, Standard on Publish"
+                    fieldLabel="Default"
+                    inputValue="d"
+                    name="./cq:mboxtype"
+                    xtype="radio"/>
+                <standard
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="loads synchronously on page load, does not update"
+                    fieldLabel="Standard"
+                    inputValue="s"
+                    name="./cq:mboxtype"
+                    xtype="radio"/>
+                <ajax
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="delayed load, updates on changes in ClientContext"
+                    fieldLabel="AJAX"
+                    inputValue="a"
+                    name="./cq:mboxtype"
+                    xtype="radio"/>
+            </items>
+        </mboxType>
+        <framework
+            jcr:primaryType="cq:Widget"
+            hidden="{Boolean}true"
+            xtype="frameworkselection"/>
+        <mappings
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Context parameter"
+            name="./cq:mappings"
+            obsolete="{Boolean}true"
+            orderable="false"
+            xtype="ccmvariablefield">
+            <fieldConfig
+                jcr:primaryType="cq:Widget"
+                xtype="ccmvariablefielditem"/>
+        </mappings>
+        <static
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Static parameter"
+            name="./cq:staticparams"
+            orderable="false"
+            xtype="variablefield">
+            <fieldConfig
+                jcr:primaryType="cq:Widget"
+                keyEmptyText="Parameter"
+                valueEmptyText="Value"
+                xtype="variablefielditem"/>
+        </static>
+    </items>
+</jcr:root>

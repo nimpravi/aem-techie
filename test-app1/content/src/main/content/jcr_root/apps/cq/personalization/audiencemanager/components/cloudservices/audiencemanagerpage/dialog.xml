@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <general
+            jcr:primaryType="nt:unstructured"
+            title="AudienceManager Settings"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <partner
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldLabel="Partner"
+                    name="./partner"
+                    xtype="textfield"/>
+                <container
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldLabel="Container Namespace ID"
+                    name="./container"
+                    xtype="textfield"/>
+                <btnpanel
+                    jcr:primaryType="cq:Widget"
+                    border="{Boolean}false"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <connectbutton
+                            jcr:primaryType="cq:Widget"
+                            localName="connectButton"
+                            style="float:right;"
+                            text="Connect to AudienceManager"
+                            xtype="button">
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                afterrender="function(comp) { CQ.audiencemanager.AudienceManager.afterRender(comp); }"
+                                click="function(comp,evt) { CQ.audiencemanager.AudienceManager.checkDil(comp, evt); }"/>
+                        </connectbutton>
+                    </items>
+                </btnpanel>
+                <accesstoken
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="Generated"
+                    fieldLabel="Access Token"
+                    fieldSubLabel="read only"
+                    name="./oauthAccessToken"
+                    readOnly="{Boolean}true"
+                    xtype="hidden"/>
+                <refreshtoken
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="Generated"
+                    fieldLabel="Refresh Token"
+                    fieldSubLabel="read only"
+                    name="./oauthRefreshToken"
+                    readOnly="{Boolean}true"
+                    xtype="hidden"/>
+                <tokenexpires
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="Generated"
+                    fieldLabel="Token Expire Date"
+                    fieldSubLabel="read only"
+                    name="./oauthExpiresDate"
+                    readOnly="{Boolean}true"
+                    xtype="textfield"/>
+                <tokenexpiresepoch
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="Generated"
+                    fieldLabel="Token Expire Date"
+                    fieldSubLabel="read only"
+                    name="./oauthExpiresEpoch"
+                    readOnly="{Boolean}true"
+                    xtype="hidden"/>
+                <searchformxml
+                    jcr:primaryType="cq:Widget"
+                    name="./searchformxml"
+                    xtype="hidden"/>
+            </items>
+        </general>
+    </items>
+</jcr:root>

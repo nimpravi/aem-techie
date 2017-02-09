@@ -1,0 +1,402 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+  @font-face {
+  font-family: segouil;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/segoeuil/segoeuil.eot");
+  src: url("../fonts/segoeuil/segoeuil.woff") format("woff"), url("../fonts/segoeuil/segoeuil.ttf") format("truetype"), url("../fonts/segoeuil/segoeuil.svg") format("svg");
+}
+
+img {
+    border: 0;
+}
+body {
+    font-family: 'segouil' !important;
+	background-color: #e6e8ea;	
+}
+header {
+	height: 456px;	
+	padding: 0;		
+	z-index: 2;
+	margin: 0 auto;
+	background-image:url('Banner_BG.jpg');
+}
+div.transbox{
+	height:92px;
+	background-color:#ded3b3;
+	opacity:0.6;
+  	filter:alpha(opacity=60); /* For IE8 and earlier */
+  	margin: 0 auto;
+  	z-index: 25;
+}
+div.content {
+	clear: both;
+	width: 960px;
+    margin: 0 auto;  
+}
+
+div.headerNav{
+	width: 960px;
+	height: 90px;
+    margin: 0 auto;   
+    /*opacity:0.9;
+	filter:Alpha(opacity=90); /* IE8 and earlier */	
+}
+div.logo {
+    margin:25px;
+    width: 80px;
+    height: 14px;
+    vertical-align: middle;
+    float: left;    
+}
+
+nav ul {
+	text-align: left;		
+}
+
+nav li {
+	list-style-type: none;
+	float: left;	
+	height: 57px;
+	vertical-align: middle;
+	padding-top: 30px;	
+}	
+.search{
+	margin-right: 30px;
+	float: right;
+	opacity:1;
+	filter:Alpha(opacity=90); /* IE8 and earlier */		
+}
+nav ul li a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color:  #282828;	
+	font-family: 'SEGOEUIL';
+	font-size: 13pt;		
+}
+
+nav ul li.active {
+	-webkit-box-shadow: 0 5px 0px #1375c6;
+	-moz-box-shadow: 0 5px 0px #1375c6;
+	opacity:0.9;	
+	filter:Alpha(opacity=90); /* IE8 and earlier */	
+	background-color: #b7b7b7;
+}
+
+nav ul li.active a{
+	color:#1476c6;
+	opacity:.9;	
+	filter:Alpha(opacity=90); /* IE8 and earlier */	
+}
+
+section.leftColumn { 
+    width: 680px;
+    float: left;
+    background-color: #e6e8ea;    
+    padding: 5px;
+}
+
+section.column p {
+    margin-bottom: 10px;
+}
+section.rightColumn {
+    width: 240px;
+    float: left;
+    
+}
+
+div.productDetail{
+	background-color: #f5f5f5;
+	height: 340px;
+	margin-top: -150px;
+	z-index: 25;	
+	font-family: 'SEGOEUIL';
+}
+
+
+.tit{
+	float: right;
+	color: #1476c6;
+	font-family: 'SEGOEUIL';
+	font-size: 12pt;
+	padding: 10px;
+}
+
+p.findtitle{
+	font-family: 'SEGOEUIL';
+	font-size: 12pt;
+	color: #1476c6;
+}
+
+.writereview{
+	clear: both;
+}
+
+
+div.productDetail p img{
+	margin-top:20px;
+}
+
+.buttonclass{
+	border: none;
+	background-image: url('Write_a_review_button.PNG');
+	width:93px;
+	height: 29px;
+	border-radius: 2px;
+}
+
+footer {
+	clear: both;
+	padding: 0;		
+	margin: 0 auto;
+	background-color:#282828;
+	height: 75px;
+}
+
+.footerlinks{
+	width: 960px;	
+    margin: 0 auto; 
+    color: #858383;
+    font-family: 'SEGOEUIL';
+	font-size: 11pt;
+}
+
+p.fbtitle{
+	background-image: url('FB_Icon.PNG');
+	background-position: 10px;
+	background-size: 19px 19px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	color: #3c5a98;
+	font-family: 'SEGOEUIL';
+	font-size: 12pt;
+	margin-top: 2px;
+}
+
+.facebookfeeds,.findurstore{
+	border-top: 2px solid #1375c6;
+	margin-top: 15px;
+}
+
+p.feeds{
+	background-image: url('Avatar_M.PNG');
+	background-position: 10px;
+	background-size: 17px 19px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	color: : #5a5a5b;
+	font-family: 'SEGOEUIL';
+	font-size: 12pt;
+}
+
+p.feedswithoutimage{
+	font-family: 'SEGOEUIL';
+	font-size: 11pt;
+}
+
+.findurstore p a{
+	color:#1476c6;
+	font-size: 11pt;
+
+}
+
+.flouresentTitle{
+	font-family: 'SEGOEUIL';
+	font-size: 12pt;
+	color:#1476c6;
+	font-weight:bold	
+}
+
+
+.findurstore div{
+	margin: 5px;
+}
+
+.footerlinks ul li{
+	float: left;
+	list-style-type: none;
+	font-size: 11pt;
+}
+
+.footerbottomright{
+	float: right;
+	text-align: left;
+	font-size: 11pt;
+}
+
+.footerbottomleft{
+	float: left;
+	text-align: left;
+	font-size: 11pt;
+}
+
+p.spiralfluoresent{
+
+	background-image:url('Description_highlight.PNG');
+	background-position: bottom left;
+	background-size: 620px 4px;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;	
+}
+
+.spiralfluoresentbox{
+	width: 620px;
+}
+
+
+.accordianseperatorexpand,.accordianseperatorminimise{
+	border-top: 1px solid #cfd2d4;
+	margin-top: 15px;
+	padding-top: 5px;
+	width: 620px;
+	clear: both;
+}
+
+.productinfo{
+	margin: 0px;
+	padding: 0;
+	font-family: 'SEGOEUIL';
+	font-size: 12pt;
+}
+
+.accordianseperatorexpand{
+	background-image: url('Accordian_expanded.PNG');
+	background-position: top right;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+}
+
+.accordianseperatorminimise{
+	background-image: url('Accordian_Collapsed.PNG');
+	background-position: top right;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+}
+
+.accordiantitle{
+	font-family: 'SEGOEUIL';
+	font-weight: bold;
+	font-size: 12pt;
+	color: #1476c6;
+}
+
+.accordionItem .labelleft{
+	float: left;
+	width: 300px;
+}
+
+.accordionItem .labelright{
+	float: left;
+	width: 100px;
+}
+
+.slider{
+	width: 220px;
+	margin-left: 10px;	
+}
+.slider p{
+	float: left;
+
+}
+
+.backgrey{
+	margin-top: -10px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.star{
+	float: left;
+	margin-top: -10px;
+	margin-left: 15px;	
+}
+
+/*Accordian component*/
+
+.accordionItem h2 { border-top: 1px solid #cfd2d4;
+margin-top: 15px;
+padding-top: 5px;
+width: 620px;
+clear: both;
+background-image: url('Accordian_expanded.PNG');
+background-position: top right;
+background-size: 20px 20px;
+background-repeat: no-repeat;
+font-family: 'SEGOEUIL';
+font-weight: bold;
+font-size: 12pt;
+color: #1476c6;
+}
+.accordionItem h2:hover { cursor: pointer; }
+
+.accordionItem.hide h2 { 
+border-top: 1px solid #cfd2d4;
+margin-top: 15px;
+padding-top: 5px;
+width: 620px;
+clear: both;
+background-image: url('Accordian_Collapsed.PNG');
+background-position: top right;
+background-size: 20px 20px;
+background-repeat: no-repeat;
+font-family: 'SEGOEUIL';
+font-weight: bold;
+font-size: 12pt;
+color: #1476c6;
+}
+.accordionItem.hide div { display: none;}
+
+.accord-content { display: none; }
+
+.accordionItem div{
+	font-family: 'SEGOEUIL';
+	font-size: 11pt;
+}
+.pointer{
+	cursor:pointer;
+}
+
+.storeIcon{
+	float: left;
+}
+.storeInfo{
+	margin-top: 15px;
+}
+
+/*slider*/
+.liquid {
+	width: 225px;
+}
+.liquid .previous {
+	display:block;
+	height:23px;
+	width:12px;
+	background-image:url('../css/Left_arrow.PNG');
+	float:left;
+	margin-top:5px;
+	padding:0;	
+}
+.liquid .next {
+	display:block;
+	height:23px;
+	width:12px;
+	background-image:url('../css/Right_arrow.PNG');
+	float:right;
+	margin-top:5px;
+	padding:0;
+}
+.liquid ul li {
+	width:35px;
+	padding:0 5px;
+	margin:0;
+}
+
+

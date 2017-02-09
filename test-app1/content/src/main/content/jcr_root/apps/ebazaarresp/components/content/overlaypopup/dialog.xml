@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    title="Overlay Popup"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Panel"
+            title="Content">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <richtext
+                    jcr:primaryType="cq:Widget"
+                    enableAlignments="{Boolean}true"
+                    enableParagraphFormat="{Boolean}true"
+                    enableSourceEdit="{Boolean}true"
+                    enableSpecialChars="{Boolean}true"
+                    enableSubSuperScript="{Boolean}true"
+                    height="500"
+                    hideLabel="{Boolean}true"
+                    name="./text"
+                    title="Text"
+                    xtype="richtext">
+                    <cssStyles
+                        jcr:primaryType="nt:unstructured"
+                        popup="Popup"/>
+                    <htmlRules jcr:primaryType="nt:unstructured">
+                        <docType
+                            jcr:primaryType="nt:unstructured"
+                            baseType="xhtml"
+                            version="1.0">
+                            <typeConfig
+                                jcr:primaryType="nt:unstructured"
+                                isXhtmlStrict="{Boolean}true"
+                                useSemanticMarkup="true">
+                                <semanticMarkupMap
+                                    jcr:primaryType="nt:unstructured"
+                                    b="strong"/>
+                            </typeConfig>
+                        </docType>
+                        <serializer jcr:primaryType="nt:unstructured">
+                            <config
+                                jcr:primaryType="nt:unstructured"
+                                useShortTags="{Boolean}false"/>
+                        </serializer>
+                    </htmlRules>
+                    <linkButtons
+                        jcr:primaryType="nt:unstructured"
+                        anchor="{Boolean}false"
+                        createlink="{Boolean}true"
+                        unlink="{Boolean}true"/>
+                    <linkbrowseConfig
+                        jcr:primaryType="nt:unstructured"
+                        defaultProtocol="http://"
+                        height="250"
+                        protocols="[http://,ftp://,mailto:]">
+                        <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                            <cssClass
+                                jcr:primaryType="cq:Widget"
+                                attribute="class"
+                                defaultValue="lnk"
+                                fieldLabel="Link style"
+                                name="./cssClass"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <btn
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Button"
+                                        value="btn"/>
+                                    <btnAsLayer
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Button (ref/footnote as layer)"
+                                        value="btn reftooltip"/>
+                                    <btnSecondary
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Button (Secondary)"
+                                        value="btn secondary"/>
+                                    <btnSecondaryAsLayer
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Button (Secondary) (ref/footnote as layer)"
+                                        value="btn secondary reftooltip"/>
+                                    <lnk
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Plain Link"
+                                        value="lnk"/>
+                                    <lnkAsLayer
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Plain Link (ref/footnote as layer)"
+                                        value="lnk reftooltip"/>
+                                </options>
+                            </cssClass>
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                attribute="title"
+                                fieldLabel="Title (tool tip)"
+                                xtype="textfield"/>
+                        </linkAttributes>
+                    </linkbrowseConfig>
+                    <listButtons
+                        jcr:primaryType="nt:unstructured"
+                        indent="{Boolean}false"
+                        ordered="{Boolean}true"
+                        outdent="{Boolean}false"
+                        unordered="{Boolean}true"/>
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <paraformat
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <formats jcr:primaryType="cq:WidgetCollection">
+                                <heading1
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 1"
+                                    tag="h1"/>
+                                <heading2
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 2"
+                                    tag="h2"/>
+                                <heading3
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 3"
+                                    tag="h3"/>
+                                <heading4
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Heading 4"
+                                    tag="h4"/>
+                                <horizontalRule
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Horizontal Rule"
+                                    tag="hr"/>
+                                <paragraph
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Paragraph"
+                                    tag="p"/>
+                            </formats>
+                        </paraformat>
+                        <styles
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                    <specialCharsConfig
+                        jcr:primaryType="nt:unstructured"
+                        cellCls="cq-rte-scd-cell"
+                        magnifyCls="cq-rte-scd-magnify"
+                        overCls="cq-rte-scd-cell-over"
+                        tableCls="cq-rte-scd-table">
+                        <chars jcr:primaryType="nt:unstructured">
+                            <ampersand
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;amp;"/>
+                            <asterisk
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;#42;"/>
+                            <copyright
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;copy;"/>
+                            <doubledagger
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;Dagger;"/>
+                            <greaterthan
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;gt;"/>
+                            <lessthan
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;lt;"/>
+                            <registered
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;reg;"/>
+                            <trademark
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;trade;"/>
+                        </chars>
+                    </specialCharsConfig>
+                    <tagReplace
+                        jcr:primaryType="nt:unstructured"
+                        b="strong"
+                        i="em"/>
+                </richtext>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

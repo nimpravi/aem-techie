@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    hideLabel="true"
+    title="Kaltura Video Upload"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <videoUpload
+                        jcr:primaryType="cq:Widget"
+                        name="./file"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            ddGroups="media"
+                            fieldDescription="Choose the video files you want to upload in Kaltura"
+                            fileNameParameter="[./fileName&#xa;]"
+                            fileReferenceParameter="./fileReference"
+                            xtype="fileuploadfield">
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                fileselected="&#x9;function(box){&#xa;alert(&quot;file selected&quot;)}"/>
+                        </fieldConfig>
+                    </videoUpload>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

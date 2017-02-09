@@ -1,0 +1,17 @@
+<%--
+
+  Home Page component.
+
+  This is the Home Page for LifePlus site
+
+--%><%
+%><%@include file="/libs/foundation/global.jsp"%><%
+%>
+<cq:include path="lifeplusCarousel" resourceType="/apps/solution-accelerators/components/lifeplus/content/lifePlusCarousel"/>
+<cq:include path="testimonials" resourceType="/apps/solution-accelerators/components/global/content/testimonials"/>
+<cq:include path="custompar" resourceType="foundation/components/parsys" />
+<cq:include path="custompar1" resourceType="/apps/solution-accelerators/components/global/content/customParsys" />
+<cq:include path="oauthcomponent" resourceType="/apps/solution-accelerators/components/lifeplus/content/oauthcomponent" />
+<cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
+ <cq:include path="clickstreamcloud" resourceType="cq/personalization/components/clickstreamcloud"/>
+<%@taglib prefix="personalization" uri="http://www.day.com/taglibs/cq/personalization/1.0" %>

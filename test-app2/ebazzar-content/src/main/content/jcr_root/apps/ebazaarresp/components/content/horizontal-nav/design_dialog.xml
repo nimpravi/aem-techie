@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Top Navigation"
+    width="700px"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <panel
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        baseName="link_"
+                        fieldDescription="Click on the &quot;+&quot; button to add navigation link"
+                        fieldLabel="Navigation links"
+                        fieldSubLabel="&lt;text>"
+                        matchBaseName="false"
+                        name="./links"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <field1
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldLabel="Link path"
+                                name="./path"
+                                width="250px"
+                                xtype="pathfield"/>
+                            <field2
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Link Title"
+                                name="./links/title"
+                                width="250px"
+                                xtype="textfield"/>
+                        </fieldConfigs>
+                    </links>
+                </items>
+            </panel>
+        </items>
+    </items>
+</jcr:root>

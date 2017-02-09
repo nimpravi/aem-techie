@@ -1,0 +1,2 @@
+surferinfo.js
+deviceslider.js

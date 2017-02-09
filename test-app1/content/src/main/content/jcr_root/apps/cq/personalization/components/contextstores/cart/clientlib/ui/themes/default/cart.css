@@ -1,0 +1,119 @@
+/*
+ * ***********************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2011 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ * ***********************************************************************
+ */
+
+.cq-cc-cart ol, .cq-cc-cart ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.cq-cc-cart li {
+    padding: 0.5em 0;
+}
+
+.cq-cc-cart li img {
+    margin-right: 0.5em;
+    background: #fff;
+    margin-bottom: 2px;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.cq-cc-cart .cq-cc-content {
+    width: auto;
+    float: none;
+    margin: 0;
+}
+
+.cq-cc-cart-promotions a {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+.cq-cc-cart-promotions {
+    display: inline;
+}
+
+.cq-cc-cart-vouchers a {
+    font-size: 12px;
+}
+
+.cq-cc-cart-vouchers a[data-voucher] {
+    display: inline-block;
+    margin: 0 2px 0 10px;
+    width: 20px;
+    height: 16px;
+    background-image: url("../../../../../../../../../../libs/cq/personalization/components/clientcontext/clientlib/ui/themes/default/icons/close.png");
+    background-repeat: no-repeat;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.cq-cc-cart-vouchers {
+    display: inline;
+}
+
+.cq-cc-store ol.cq-cc-cart-items {
+    padding-bottom: 0.5em;
+}
+
+.cq-cc-store .cq-cc-cart-items li {
+    border: 0 none;
+    width: auto;
+    min-height: 22px;
+    font-size: 12px;
+    padding: 0;
+}
+
+.cq-cc-cart-items .cq-cc-store-property {
+    margin-left: 8px;
+}
+
+.cq-cc-cart-items .cq-cc-cart-item-quantity {
+    float: right;
+}
+
+.cq-cc-cart-items .cq-cc-cart-item-price {
+    float: right;
+    text-align: right;
+    min-width: 72px;
+    line-height: 18px;
+    margin-top: 4px;
+    margin-right: 12px;
+}
+
+.cq-cc-cart-totalprice {
+    float: right;
+}
+
+.cq-cc-cart-totalprice span.cq-cc-store-property {
+    margin-top: 0;
+}
+
+#CQ div.cq-cc-cart-tooltip div.x-tip-body {
+    padding: 1px;
+    color: black;
+}
+
+#CQ span.cq-cc-cart-potential-match {
+    color: grey;
+}

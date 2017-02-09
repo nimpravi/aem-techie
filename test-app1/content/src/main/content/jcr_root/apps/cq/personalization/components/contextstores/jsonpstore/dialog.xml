@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="630"
+    title="Store and Properties"
+    width="500"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <panel jcr:primaryType="cq:Panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <serviceURL
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="${callback} will be replaced by local callback handler.&lt;br>Example: http://api.wipmania.com/jsonp?callback=${callback}"
+                    fieldLabel="JSONP Service URL"
+                    name="./serviceURL"
+                    xtype="textfield"/>
+                <connectbutton
+                    jcr:primaryType="cq:Widget"
+                    localName="cq:preloadButton"
+                    style="margin-bottom:5px;"
+                    text="Fetch Store"
+                    xtype="button">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        click="function(comp, evt) {     var form = this.findParentByType('form');     var propertyField = form.find('name', './properties')[0];     if (propertyField) {         propertyField.setValue();     }     var serviceURL = form.find('name', './serviceURL')[0].getValue();     if (!serviceURL) {         CQ.Ext.Msg.alert(CQ.I18n.getMessage('Missing parameter'), CQ.I18n.getMessage('You need to specify a service URL.'));         return false;     }     var store = CQ_Analytics.JSONPStore.registerNewInstance(null, serviceURL, null, function() {         var names = this.getPropertyNames();         if (names &amp;&amp; propertyField) {             for (var i = 0; i &lt; names.length; i++) {                 var value = names[i];                 if (!CQ.shared.XSS.KEY_REGEXP.test(value)) {                     propertyField.addItem(value);                 }             }         }     });     if (!store) {         CQ.Ext.Msg.alert(CQ.I18n.getMessage('Invalid store definition'), CQ.I18n.getMessage('Cannot create a store based on provided service URL.'));         return false;     } else {         form.find('name', './store')[0].setValue(store.getName());     } }"/>
+                </connectbutton>
+                <store
+                    jcr:primaryType="cq:Widget"
+                    name="./store"
+                    xtype="hidden"/>
+                <properties
+                    jcr:primaryType="cq:Widget"
+                    border="false"
+                    dragDropMode="true"
+                    hideLabel="true"
+                    name="./properties"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        editable="true"
+                        optionsProvider="function(path, record) {     var selectedStore = this.findParentByType('form').find('name', './store')[0].getValue();     return CQ_Analytics.ClientContextUtils.storePropertiesOptionsProvider(selectedStore, true); }"
+                        type="select"
+                        xtype="selection"/>
+                </properties>
+                <thumbnail
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Define a store property or a path to an image: it will be used as the store thumbnail. Leave empty to have no thumbnail.&lt;br>Example: http://maps.googleapis.com/maps/api/staticmap?center=${/wipmania/latitude},${/wipmania/longitude}&amp;zoom=${/wipmania/zoom}&amp;size=80x80&amp;sensor=false"
+                    fieldLabel="Thumbnail"
+                    name="./thumbnail"
+                    xtype="pathfield"/>
+            </items>
+        </panel>
+    </items>
+</jcr:root>

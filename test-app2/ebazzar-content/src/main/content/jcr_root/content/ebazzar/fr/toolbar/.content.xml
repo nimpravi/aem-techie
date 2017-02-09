@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-02-21T17:13:46.551+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2014-03-03T17:05:54.681+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/ebazaarresp/templates/contentpage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Toolbar"
+        jcr:uuid="1cdfde25-07c1-4180-84ca-4fa4e1069ab5"
+        sling:resourceType="/apps/ebazaarresp/components/page/contentpage"
+        hideInNav="true">
+        <image
+            jcr:lastModified="{Date}2014-02-06T11:24:31.230+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+    <privacy-policy/>
+    <terms-and-conditions/>
+    <company/>
+    <customer-service/>
+    <policies/>
+    <connect-with-us/>
+</jcr:root>

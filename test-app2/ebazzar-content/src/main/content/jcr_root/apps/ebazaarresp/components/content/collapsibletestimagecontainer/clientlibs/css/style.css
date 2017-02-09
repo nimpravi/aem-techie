@@ -1,0 +1,22 @@
+/* Accordian Component.*/
+hr.green{clear:both;height:1px;border:0;background:0;content:'';border-bottom:1px solid #84bd00;padding-top:36px;margin-bottom:48px}
+hr.green.small{padding-top:3px;margin-bottom:18px}
+h5{font-size:15px;font-weight:bold;color:#071d49;margin-top:5px;margin-bottom:5px}
+
+
+#myAccordian{width:100%;}
+#myAccordian .accItem .collapsesign{float: right;margin-top: -24px;font-weight: bold;font-size: 17px;padding-right: 4%;}
+#myAccordian .accItem .collapsesign:hover,#myAccordian .accItem h5:hover{cursor:pointer;}
+#myAccordian .accItem h5{margin-top:-9px;margin-right:45px;}
+
+.imageToLeft{
+float:left;
+margin-right:10px;
+}
+
+.imageToRight{
+float:right;
+clear: left;
+margin-left:5px
+}
+

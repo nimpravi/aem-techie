@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Age property (from the user profile)"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            height="30"
+            text="Add trait to the current segment: age from the user profile and a specified value."
+            xtype="static"/>
+        <jsObject
+            jcr:primaryType="cq:Widget"
+            defaultValue="clientcontext.profile"
+            name="./jsObject"
+            xtype="hidden"/>
+        <label
+            jcr:primaryType="cq:Widget"
+            defaultValue="The visitor"
+            name="./label"
+            readOnly="true"
+            xtype="hidden"/>
+        <name
+            jcr:primaryType="cq:Widget"
+            defaultValue="age"
+            fieldLabel="Property"
+            name="./name"
+            readOnly="true"
+            xtype="textfield"/>
+        <operator
+            jcr:primaryType="cq:Widget"
+            defaultValue="equals"
+            fieldLabel="Operator"
+            name="./operator"
+            operators="[equals,older,olderorequal,younger,youngerorequal,notequal]"
+            type="select"
+            xtype="operatorselection"/>
+        <value
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Examples: age &lt;= 20, age > 60"
+            fieldLabel="Value"
+            name="./value"
+            xtype="textfield"/>
+        <valueFormat
+            jcr:primaryType="cq:Widget"
+            defaultValue="parseInt"
+            name="./valueFormat"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

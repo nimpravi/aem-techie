@@ -1,0 +1,13 @@
+div.feedlink-text {
+    height:20px;
+    line-height:20px;
+    text-decoration:underline;
+    cursor:pointer;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+a.feedlink-icon {
+    background:transparent url("../../../../../../etc/designs/default/images/collab/feed.png") 0 0 no-repeat;
+    padding-left:20px;
+}

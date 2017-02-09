@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" version="2.1">
+	<tlib-version>1.0</tlib-version>
+	<short-name>acc</short-name>
+	<uri>http://localhost:4502/bin/customComponents</uri>
+
+	<tag>
+		<name>carousel</name>
+		<tag-class>com.cts.accelerators.lifeplus.tag.CustomCarouselTag</tag-class>
+		<body-content>empty</body-content>
+
+
+		<variable>
+			<name-from-attribute>carouselList</name-from-attribute>
+			<variable-class>java.util.ArrayList</variable-class>
+			<declare>TRUE</declare>
+			<scope>AT_END</scope>
+		</variable>
+
+
+		<attribute>
+			<name>imageNodePath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>carouselValuesNodePath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>carouselList</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+
+	</tag>
+	
+	<tag>
+		<name>OOTBcarousel</name>
+		<tag-class>com.cts.accelerators.lifeplus.tag.OOTBCarouselTag</tag-class>
+		<body-content>empty</body-content>
+
+
+		<variable>
+			<name-from-attribute>OOTBCarouselList</name-from-attribute>
+			<variable-class>java.util.ArrayList</variable-class>
+			<declare>TRUE</declare>
+			<scope>AT_END</scope>
+		</variable>
+
+		<attribute>
+			<name>carouselNodePath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>OOTBCarouselList</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+
+	</tag>
+	
+	
+	<tag>
+		<name>customForm</name>
+		<tag-class>com.cts.accelerators.lifeplus.tag.GenericSearchTag</tag-class>
+		<body-content>empty</body-content>
+
+
+		<variable>
+			<name-from-attribute>genericSearchList</name-from-attribute>
+			<variable-class>java.util.ArrayList</variable-class>
+			<declare>TRUE</declare>
+			<scope>AT_END</scope>
+		</variable>
+
+		<variable>
+			<name-from-attribute>rowList</name-from-attribute>
+			<variable-class>java.util.Set</variable-class>
+			<declare>TRUE</declare>
+			<scope>AT_END</scope>
+		</variable>
+
+
+		<attribute>
+			<name>fieldsNodePath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		
+		<attribute>
+			<name>genericSearchList</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	
+		<attribute>
+			<name>rowList</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+	</tag>
+	
+	
+</taglib>

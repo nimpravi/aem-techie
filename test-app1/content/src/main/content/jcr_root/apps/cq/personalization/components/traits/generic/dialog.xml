@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Store Property"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            height="30"
+            text="Add trait to the current segment: any information that is available in the selected store and a specified value."
+            xtype="static"/>
+        <jsObject
+            jcr:primaryType="cq:Widget"
+            emptyText=""
+            fieldLabel="Store"
+            name="./jsObject"
+            optionsProvider="CQ_Analytics.ClientContextUtils.storesOptionsProvider"
+            type="select"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                selectionchanged="function() {                 var selectedStore = this.findParentByType('form').find('name', './jsObject')[0].getValue();                 var nameField = this.findParentByType('form').find('name', './name')[0];                 nameField.setOptions(CQ_Analytics.ClientContextUtils.storePropertiesOptionsProvider(selectedStore));                                  nameField.setValue('');                 }"/>
+        </jsObject>
+        <name
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Property Name"
+            name="./name"
+            optionsProvider="function(path, record) {             var selectedStore = this.findParentByType('form').find('name', './jsObject')[0].getValue();                                                            return CQ_Analytics.ClientContextUtils.storePropertiesOptionsProvider(selectedStore);                              }"
+            type="combobox"
+            xtype="selection"/>
+        <operator
+            jcr:primaryType="cq:Widget"
+            defaultValue="equals"
+            fieldLabel="Operator"
+            name="./operator"
+            operators="[equals,greater,greaterorequal,less,lessorequal,notequal,contains,beginswith]"
+            type="select"
+            xtype="operatorselection"/>
+        <value
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Property Value"
+            name="./value"
+            xtype="textfield"/>
+        <valueFormat
+            jcr:primaryType="cq:Widget"
+            defaultValue=""
+            name="./valueFormat"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

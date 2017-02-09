@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="items"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="First">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image1
+                        jcr:primaryType="cq:Widget"
+                        ddGroups="[media]"
+                        fileNameParameter="./image1/fileName"
+                        fileReferenceParameter="./image1/fileReference"
+                        height="200"
+                        name="./image1/file"
+                        requestSuffix="/image1.img.png"
+                        sizeLimit="100"
+                        title="Image1"
+                        xtype="html5smartimage"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Overlay title"
+                        name="./title1"
+                        xtype="textfield"/>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link To"
+                        name="./link1"
+                        xtype="pathfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        name="/image1/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Second">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        ddGroups="[media]"
+                        fileNameParameter="./image2/fileName"
+                        fileReferenceParameter="./image2/fileReference"
+                        height="200"
+                        name="./image2/file"
+                        requestSuffix="/image2.img.png"
+                        sizeLimit="100"
+                        title="Image2"
+                        xtype="html5smartimage"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Overlay title"
+                        name="./title2"
+                        xtype="textfield"/>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link To"
+                        name="./link2"
+                        xtype="pathfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        name="/image2/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Third">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        ddGroups="[media]"
+                        fileNameParameter="./image3/fileName"
+                        fileReferenceParameter="./image3/fileReference"
+                        height="200"
+                        name="./image3/file"
+                        requestSuffix="/image3.img.png"
+                        sizeLimit="100"
+                        title="Image3"
+                        xtype="html5smartimage"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Overlay title"
+                        name="./title3"
+                        xtype="textfield"/>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link To"
+                        name="./link3"
+                        xtype="pathfield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        name="/image3/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </tab3>
+        </items>
+    </items>
+</jcr:root>

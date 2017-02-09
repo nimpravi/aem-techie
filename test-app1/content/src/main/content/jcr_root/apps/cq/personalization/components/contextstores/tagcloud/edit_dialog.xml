@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="330"
+    ok="function() {         var tagcloud = CQ_Analytics.ClientContext.get('/tagcloud');         var newTags = this.getField('tags').getValue();         var currentTags = tagcloud.getTags();         tagcloud.reset();         for(var i=0;i&lt;newTags.length;i++) {             var t = newTags[i];             var value = currentTags[t] || 1;             tagcloud.setProperty(t,value);         }         this.hide();     }"
+    title="Tag cloud edition"
+    width="500"
+    xtype="dialog">
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        show="function(){                                 this.getField('tags').setValue(CQ_Analytics.ClientContext.get('/tagcloud').getPropertyNames());                                 }"/>
+    <items jcr:primaryType="cq:Panel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tags
+                jcr:primaryType="cq:Panel"
+                fieldLabel="Tags"
+                getLabel="function() {                             var ret = new Array();                             for (var i = 0; i &lt; this.tags.length; i++) {                                 var tag = this.tags[i].tag;                                 if (tag.name) {                                     ret.push(tag.name);                                 }                             }                             return ret;                         }"
+                name="tags"
+                xtype="tags"/>
+        </items>
+    </items>
+</jcr:root>

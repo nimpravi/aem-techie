@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/solution-accelerators"/>
+    <filter root="/content/lifeplus"/>
+    <filter root="/etc/designs/solution-accelerators"/>
+    <filter root="/etc/designs/map"/>
+    <filter root="/etc/designs/lifeplus"/>
+    <filter root="/etc/designs/demo-kao"/>
+    <filter root="/etc/clientlibs/common"/>
+    <filter root="/content/dam/solution-accelerators"/>
+    <filter root="/content/dam/LifePlus"/>
+    <filter root="/content/dam/demo-kao"/>
+    <filter root="/etc/reports/damFilesMapping.properties"/>
+</workspaceFilter>

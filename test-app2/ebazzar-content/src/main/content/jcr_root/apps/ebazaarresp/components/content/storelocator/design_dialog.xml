@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Map details"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <width
+            jcr:primaryType="cq:Widget"
+            defaultValue="500"
+            fieldDescription="Width of Map (default 500)"
+            fieldLabel="Width"
+            name="./width"
+            xtype="textfield"/>
+        <height
+            jcr:primaryType="cq:Widget"
+            defaultValue="300"
+            fieldDescription="Height of Map (Default 300)"
+            fieldLabel="Height"
+            name="./height"
+            xtype="textfield"/>
+    </items>
+</jcr:root>

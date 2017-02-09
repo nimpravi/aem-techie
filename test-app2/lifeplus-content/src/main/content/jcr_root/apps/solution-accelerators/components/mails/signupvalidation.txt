@@ -1,0 +1,4 @@
+subject: Lifeplus Account Activation
+
+<p style='color: black'><b>Please click on the link below to validate your email:</b></p>
+${activationLink}

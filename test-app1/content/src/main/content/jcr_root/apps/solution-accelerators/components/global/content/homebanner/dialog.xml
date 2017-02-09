@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="items"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <img
+                jcr:primaryType="cq:Widget"
+                allowBlank="false"
+                ddGroups="[media]"
+                fieldLabel="Banner Image 1"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                name="./image/file"
+                sizeLimit="100"
+                title="Banner Image 1"
+                xtype="html5smartimage"/>
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./bannerTitle"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./bannerDescription"
+                        xtype="richtext"/>
+                    <linktext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Text"
+                        name="./bannerLinkText"
+                        xtype="textfield"/>
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link To"
+                        name="./bannerLink"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+            <img1
+                jcr:primaryType="cq:Widget"
+                allowBlank="false"
+                ddGroups="[media]"
+                fieldLabel="Banner Image 2"
+                fileNameParameter="./image/fileName1"
+                fileReferenceParameter="./image/fileReference1"
+                name="./image/file"
+                sizeLimit="100"
+                title="Banner Image 2"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

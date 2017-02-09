@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    cq:authorizableCategory="mcm"
+    cq:lastModified="{Date}2013-02-20T13:12:40.095+05:30"
+    cq:lastModifiedBy="admin"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:User"
+    jcr:uuid="94232713-abf3-30f0-8bdf-95e74ace05e9"
+    rep:password="\{sha1}1db4b55d6f8d172d-43fe5d39fcc3e8a13d25484f1755e1358fdd1b5a"
+    rep:principalName="jill">
+    <_x002e_tokens jcr:primaryType="nt:unstructured"/>
+    <preferences
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq:Preferences"/>
+    <profile
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/security/components/profile"
+        birthday="{Date}1994-07-12T01:00:00.000+05:30"
+        city="Khartoum"
+        familyName="Jill"
+        gender="Female">
+        <photos/>
+        <scoring/>
+        <segments/>
+        <forum/>
+    </profile>
+</jcr:root>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Percentile"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            height="30"
+            text="This trait matches fixed segments of the users, based on predefined ranges."
+            xtype="static"/>
+        <value
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Percentiles"
+            maxValue="{Long}100"
+            minValue="{Long}0"
+            name="./value"
+            options="$PATH.options.json"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

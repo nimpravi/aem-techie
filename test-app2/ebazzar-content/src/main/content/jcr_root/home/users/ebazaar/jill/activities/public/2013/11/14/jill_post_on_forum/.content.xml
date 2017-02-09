@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2013-11-14T14:44:51.810+05:30"
+    jcr:createdBy="jill"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="jill POST on Forum"
+    sling:resourceType="granite/activitystreams/components/activity"
+    verb="POST">
+    <object
+        jcr:description="We could spend hours thumbing through the Runner's World archives, reading reviews of shoes decades old. It's also a fun way to look back at the heritage of footwear still on the market today. For example: The Nike Air Pegasus just celebrated its 30th anniversary this year, and a 20th edition of the Asics Gel-Kayano is just around the corner. However, those shoes are quite a bit different from their beginnings. Here's a look at a few highlights from the '70s, '80s, and '90s."
+        jcr:primaryType="nt:unstructured"
+        id="/content/usergenerated/content/ebazaar/en/social/forum/jcr:content/forum/1_ciot/qmh9-we_could_spendhours"
+        objectType="comment"
+        subType="social/forum/components/topic"/>
+    <target
+        jcr:primaryType="nt:unstructured"
+        displayName="Forum"
+        id="/content/ebazaar/en/social/forum"
+        objectType="/apps/ebazaar/components/page/socialpage"/>
+</jcr:root>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Page Hits"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            height="30"
+            html="Add trait to the current segment: number of time the visited page has been requested."
+            xtype="static"/>
+        <jsObject
+            jcr:primaryType="cq:Widget"
+            defaultValue="clientcontext.pagedata"
+            name="./jsObject"
+            xtype="hidden"/>
+        <label
+            jcr:primaryType="cq:Widget"
+            defaultValue="number of page hits"
+            name="./label"
+            readOnly="true"
+            xtype="textfield"/>
+        <name
+            jcr:primaryType="cq:Widget"
+            allowBlank="false"
+            defaultValue="hits"
+            name="./name"
+            xtype="hidden"/>
+        <operator
+            jcr:primaryType="cq:Widget"
+            defaultValue="equals"
+            fieldLabel="Operator"
+            name="./operator"
+            operators="[equals,greater,greaterorequal,less,lessorequal,notequal]"
+            type="select"
+            xtype="operatorselection"/>
+        <value
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Examples: page hits &lt; 10, page hits >= 27..."
+            fieldLabel="Hits Value"
+            name="./value"
+            xtype="textfield"/>
+        <valueFormat
+            jcr:primaryType="cq:Widget"
+            defaultValue="parseInt"
+            name="./valueFormat"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

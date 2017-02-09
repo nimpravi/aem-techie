@@ -1,0 +1,9 @@
+#base=js
+
+jquery.cycle.js
+jquery.cycle.transitions.js
+raphael.timerdot.js
+jquery.timerdot.js
+philips.carousel.js
+plugins.js
+validation.js

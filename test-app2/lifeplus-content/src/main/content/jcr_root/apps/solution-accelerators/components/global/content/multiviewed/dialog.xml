@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="test"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            title="FAST FACTS"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <header
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="MainTitle"
+                    maxLength="200"
+                    name="./header"
+                    width="200"
+                    xtype="textfield"/>
+                <multiview
+                    jcr:primaryType="cq:Widget"
+                    baseName="test_"
+                    fieldDescription="Click on the + button to add Fields(maximum field limit's - for normalView is 4 ,for tableView is 10)"
+                    fieldLabel="Title &amp; Text"
+                    name="./surveyset"
+                    prefix="./"
+                    xtype="mtmulticompositefield">
+                    <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                        <titler
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Title"
+                            maxLength="64"
+                            name="title"
+                            width="200"
+                            xtype="textfield"/>
+                        <description
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Text"
+                            name="description"
+                            width="200"
+                            xtype="textarea"/>
+                        <link
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Link To"
+                            maxLength="200"
+                            name="link"
+                            width="200"
+                            xtype="pathfield"/>
+                    </fieldConfigs>
+                </multiview>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

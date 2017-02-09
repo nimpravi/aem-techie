@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Metadata">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <brands
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <brand
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Brand"
+                    name="./brands"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="textfield"/>
+                </brand>
+            </items>
+        </brands>
+        <offers
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <offer
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="(in percentage)"
+                    fieldLabel="Offer (in percentage)"
+                    name="./offers"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="textfield"/>
+                </offer>
+            </items>
+        </offers>
+        <weathers
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <weather
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Weather"
+                    name="./weathers"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="textfield"/>
+                </weather>
+            </items>
+        </weathers>
+        <categories
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <categories
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Categories"
+                    name="./categories"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="textfield"/>
+                </categories>
+            </items>
+        </categories>
+        <prices
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <price
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Price"
+                    name="./price"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="textfield"/>
+                </price>
+            </items>
+        </prices>
+    </items>
+</jcr:root>

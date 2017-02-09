@@ -1,0 +1,75 @@
+/*
+ * ***********************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2011 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ * ***********************************************************************
+ */
+
+/* Containers */
+.cq-clientcontext ul.cq-cc-activities {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cq-clientcontext .cq-cc-activities li {
+    border: none;
+    line-height: 18px;
+    width: auto;
+}
+
+.cq-clientcontext .cq-cc-activity {
+    padding-bottom:2px;
+    padding-top:2px;
+}
+
+.cq-clientcontext .cq-cc-activity-date {
+    color: #808080;
+}
+
+.cq-clientcontext .cq-cc-activity-clear {
+    clear: both;
+}
+
+/* Renderers */
+.cq-clientcontext .activity-author,
+.cq-clientcontext .activity-target,
+.cq-clientcontext .activity-blog-title,
+.cq-clientcontext .activity-group-title {
+    /*background-color: #151515;*/
+    /*border-radius: 5px 5px 5px 5px;*/
+    font-weight: normal;
+    /*line-height: 21px;*/
+    /*padding: 0 4px;*/
+    text-decoration: none;
+}
+
+.cq-clientcontext .activity-author img {
+    margin-right: 10px;
+    float: left;
+    border-radius: 6px;
+    width: 40px;
+}
+
+.cq-clientcontext .activity-comment {
+    font-size:11px;
+    padding:5px 0 5px 20px;
+}
+
+
+.cq-clientcontext .cq-cc-activity .comment {
+    margin: 0;
+    padding: 0;
+}

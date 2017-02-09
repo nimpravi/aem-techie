@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Tag Cloud trait"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            height="30"
+            text="Add trait to the current segment: number of times a tag matchs with those from the pages visited."
+            xtype="static"/>
+        <jsObject
+            jcr:primaryType="cq:Widget"
+            defaultValue="clientcontext.tagcloud"
+            name="./jsObject"
+            xtype="hidden"/>
+        <tagId
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Select one of your tags"
+            fieldLabel="Tag name"
+            name="./tagId"
+            xtype="tags"/>
+        <operator
+            jcr:primaryType="cq:Widget"
+            defaultValue="equals"
+            fieldLabel="Operator"
+            name="./operator"
+            operators="[equals,greater,greaterorequal,less,lessorequal,notequal]"
+            type="select"
+            xtype="operatorselection"/>
+        <value
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Examples: number of mytag1 > 10, number of mytag2 &lt; 5"
+            fieldLabel="Tag Count"
+            name="./value"
+            xtype="numberfield"/>
+        <valueFormat
+            jcr:primaryType="cq:Widget"
+            defaultValue="parseInt"
+            name="./valueFormat"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

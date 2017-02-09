@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-02-21T17:13:46.281+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2014-03-03T17:05:53.561+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/ebazaarresp/templates/productlistpage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home Appliances"
+        jcr:uuid="a6e4d607-d33f-43cf-83ad-e3396794b8a5"
+        sling:resourceType="ebazaarresp/components/page/productlistpage"/>
+    <kitchen-appliances/>
+</jcr:root>

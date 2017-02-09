@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="630"
+    title="Store and Properties"
+    width="500"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Geolocation">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <properties
+                        jcr:primaryType="cq:Widget"
+                        border="false"
+                        dragDropMode="true"
+                        hideLabel="true"
+                        name="./properties"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            optionsProvider="function(path, record) {                                 var selectedStore = 'geolocation';                                 return CQ_Analytics.ClientContextUtils.storePropertiesOptionsProvider(selectedStore);                             }"
+                            type="combobox"
+                            xtype="selection"/>
+                    </properties>
+                    <thumbnail
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Define a store property or a path to an image: it will be used as the store thumbnail. Leave empty to have no thumbnail"
+                        fieldLabel="Thumbnail"
+                        name="./thumbnail"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

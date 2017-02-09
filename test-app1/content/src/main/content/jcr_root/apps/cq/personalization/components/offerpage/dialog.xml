@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="420"
+    stateful="false"
+    title="Properties"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <tab
+                    jcr:primaryType="cq:Widget"
+                    title="Offer"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <deprecation
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}false"
+                            collapsible="{Boolean}false"
+                            title=""
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <panel-description
+                                    jcr:primaryType="cq:Widget"
+                                    cls="x-form-fieldset-description"
+                                    html="The Offer page has been deprecated.  The standard Teaser page supports Test &amp; Target integration."
+                                    xtype="static"/>
+                            </items>
+                        </deprecation>
+                        <main
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}false"
+                            collapsible="{Boolean}false"
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    fieldLabel="Title"
+                                    inputType="text"
+                                    name="./jcr:title"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <tags
+                                    jcr:primaryType="cq:Widget"
+                                    cls="cq-propsdialog-tags"
+                                    fieldLabel="Tags/Keywords"
+                                    name="./cq:tags"
+                                    xtype="tags"/>
+                                <tagsHint
+                                    jcr:primaryType="cq:Widget"
+                                    ignoreData="{Boolean}true"
+                                    name="./cq:tags@TypeHint"
+                                    value="String[]"
+                                    xtype="hidden"/>
+                                <description
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Description"
+                                    name="./jcr:description"
+                                    xtype="textarea"/>
+                            </items>
+                        </main>
+                    </items>
+                </tab>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <blueprint-tab
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                    xtype="cqinclude"/>
+                <livecopy-tab
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

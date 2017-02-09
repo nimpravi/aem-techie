@@ -1,0 +1,54 @@
+/*
+ * ***********************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2011 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ * ***********************************************************************
+ */
+
+.cq-clientcontext p.cloud {
+    font-family: Tahoma,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.cq-clientcontext .tagcloud {
+    margin: 0;
+}
+
+.cq-clientcontext .cloud, .cq-clientcontext .tag {
+    color: white;
+    line-height: 21px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.cq-clientcontext .new {
+    font-weight: bold;
+}
+
+.cq-clientcontext .tag10 {
+    font-size: 28px;
+}
+
+.cq-clientcontext .tag5 {
+
+}
+
+.cq-clientcontext .count {
+    display: none;
+}
