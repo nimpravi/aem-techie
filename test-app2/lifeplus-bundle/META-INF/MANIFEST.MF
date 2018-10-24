@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: accelerators-kaltura
-Bundle-SymbolicName: accelerators-kaltura
-Bundle-Version: 1.0.0.qualifier
-Export-Package: com.cts.accelerators

@@ -1,2 +1,0 @@
-GMapPanel.js
-GeolocationUtils.js

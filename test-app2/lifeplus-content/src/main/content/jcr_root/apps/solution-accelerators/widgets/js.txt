@@ -1,6 +1,0 @@
-#base=source
-
-CustomSlideshow.js
-Slideshow/Slide.js
-Slideshow/SlidesPanel.js
-Slideshow/TitlePanel.js

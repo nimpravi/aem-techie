@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    cq:lastReplicated="{Date}2012-07-16T11:28:19.049+05:30"
-    cq:lastReplicatedBy="admin"
-    cq:lastReplicationAction="Activate"
-    jcr:mixinTypes="[cq:ReplicationStatus]"
-    jcr:primaryType="cq:ClientLibraryFolder"
-    categories="[ebazaarresp.backgroundbanner]"/>

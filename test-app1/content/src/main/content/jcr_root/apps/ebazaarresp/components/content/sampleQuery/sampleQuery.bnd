@@ -1,9 +1,0 @@
-Export-Package: *
-Import-Package: *
-Private-Package: *
-# Include-Resource: 
-Bundle-Name: sampleQuery
-Bundle-Description: sampleQuery
-Bundle-SymbolicName: sampleQuery
-Bundle-Version: 1.0.0-SNAPSHOT
-Bundle-Activator: com.cts.samplequery.Activator
