@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Text"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <advanced
+            jcr:primaryType="cq:Panel"
+            title="Configurations">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <passwordLabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Password"
+                    fieldLabel="Password Label"
+                    name="./passwordLabel"
+                    xtype="textfield"/>
+                <redirectTo
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Redirect To"
+                    name="./redirectTo"
+                    xtype="pathfield"/>
+                <usernameLabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Username"
+                    fieldLabel="Username Label"
+                    name="./usernameLabel"
+                    xtype="textfield"/>
+            </items>
+        </advanced>
+        <style
+            jcr:primaryType="cq:Panel"
+            title="Advanced">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <cssname
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Multiple CSS name to be entered with space in between (eg. fleft center)"
+                    fieldLabel="CSS Name"
+                    name="./cssname"
+                    value="inputFields"
+                    xtype="textfield"/>
+            </items>
+        </style>
+    </items>
+</jcr:root>

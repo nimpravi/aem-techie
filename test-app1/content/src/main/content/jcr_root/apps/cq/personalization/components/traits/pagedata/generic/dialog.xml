@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Page Property"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            height="30"
+            text="Add trait to current segment: any property of the visited page and a specified value."
+            xtype="static"/>
+        <jsObject
+            jcr:primaryType="cq:Widget"
+            defaultValue="clientcontext.pagedata"
+            name="./jsObject"
+            xtype="hidden"/>
+        <name
+            jcr:primaryType="cq:Widget"
+            allowBlank="false"
+            fieldDescription="Examples: title, hits..."
+            fieldLabel="Page Property Name"
+            name="./name"
+            xtype="textfield"/>
+        <operator
+            jcr:primaryType="cq:Widget"
+            defaultValue="equals"
+            fieldLabel="Operator"
+            name="./operator"
+            operators="[equals,greater,greaterorequal,less,lessorequal,notequal,contains,beginswith]"
+            type="select"
+            xtype="operatorselection"/>
+        <value
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Examples: title == News, hits >= 5"
+            fieldLabel="Page Property Value"
+            name="./value"
+            xtype="textfield"/>
+    </items>
+</jcr:root>

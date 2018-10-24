@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Target"
+    title_commentI18n="Component to target content to different audiences"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <general-tab
+                    jcr:primaryType="cq:Widget"
+                    title="Target"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <engine
+                            jcr:primaryType="cq:Widget"
+                            defaultValue=""
+                            fieldDescription="Select target execution engine. If not set, defaults to 'Adobe Target' if such a cloud service config is present, otherwise 'Client-side Rules (without tracking)' is used."
+                            fieldLabel="Engine"
+                            name="./cq:targetEngine"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <empty
+                                    jcr:primaryType="nt:unstructured"
+                                    text="(not set)"
+                                    value=""/>
+                                <cq
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Client-side Rules (without tracking)"
+                                    value="cq"/>
+                                <tnt
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Adobe Target"
+                                    value="tnt"/>
+                            </options>
+                        </engine>
+                    </items>
+                </general-tab>
+                <cq-tab
+                    jcr:primaryType="cq:Widget"
+                    title="Client-side"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <strategypath
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Determines which experience is shown when multiple match."
+                            fieldLabel="Strategy"
+                            name="./strategyPath"
+                            options="/libs/cq/personalization/clientlib/kernel/source/strategies/list.json"
+                            type="select"
+                            xtype="selection"/>
+                    </items>
+                </cq-tab>
+                <tnt-tab
+                    jcr:primaryType="cq:Widget"
+                    title="Adobe Target"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <accurateTargeting
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Waits until the ClientContext is loaded and therefore may increase load time. Note that when authoring this is always considered to be true."
+                            fieldLabel="Accurate targeting"
+                            inputValue="true"
+                            name="./accurateTargeting"
+                            type="checkbox"
+                            xtype="selection">
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                loadcontent="function(comp, record, path) { CQ_Analytics.TestTarget.onAccurateTargetingSelectionLoaded(comp, record, path); }"
+                                selectionchanged="function(comp, value, isChecked) {CQ_Analytics.TestTarget.onAccurateTargetingSelectionChanged(comp, value, isChecked);}"/>
+                        </accurateTargeting>
+                        <mappings
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Context parameter"
+                            name="./cq:mappings"
+                            orderable="false"
+                            showProfileField="{Boolean}false"
+                            xtype="ccmvariablefield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                showProfileField="{Boolean}false"
+                                xtype="ccmvariablefielditem"/>
+                        </mappings>
+                        <staticParams
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Static parameter"
+                            name="./staticParams"
+                            orderable="false"
+                            xtype="variablefield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                keyEmptyText="Parameter"
+                                valueEmptyText="Value"
+                                xtype="variablefielditem"/>
+                        </staticParams>
+                    </items>
+                </tnt-tab>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

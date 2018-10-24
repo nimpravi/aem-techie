@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-01-27T15:40:06.651+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2014-01-28T15:38:05.935+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/ebazaarresp/templates/productlistpage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Labtops"
+        jcr:uuid="80976e49-10d3-4a89-a136-27cfe88dfec1"
+        sling:resourceType="ebazaarresp/components/page/productlistpage"/>
+    <hp/>
+</jcr:root>

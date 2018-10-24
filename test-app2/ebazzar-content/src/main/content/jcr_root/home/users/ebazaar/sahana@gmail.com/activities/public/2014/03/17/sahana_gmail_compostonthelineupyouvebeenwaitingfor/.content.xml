@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2014-03-17T11:36:22.418+05:30"
+    jcr:createdBy="sahana@gmail.com"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="sahana@gmail.com POST on The Lineup You've Been Waiting For"
+    sling:resourceType="granite/activitystreams/components/activity"
+    verb="POST">
+    <object
+        jcr:description="sdgd sdg s"
+        jcr:primaryType="nt:unstructured"
+        id="/content/usergenerated/content/geometrixx-media/en/events/the-lineup-you-ve-been-waiting-for/jcr:content/comments/1Bucket/faog-sdgd_sdg_s"
+        objectType="comment"
+        subType="social/commons/components/comments/comment"/>
+    <target
+        jcr:primaryType="nt:unstructured"
+        displayName="The Lineup You've Been Waiting For"
+        id="/content/geometrixx-media/en/events/the-lineup-you-ve-been-waiting-for"
+        objectType="geometrixx-media/components/page/article"/>
+</jcr:root>

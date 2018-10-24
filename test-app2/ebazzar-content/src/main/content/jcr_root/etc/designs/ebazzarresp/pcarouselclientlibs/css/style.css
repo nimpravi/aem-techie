@@ -1,0 +1,2559 @@
+/* @import "grid_22-916-22_12_20.css";*/
+
+/* -- Global styles, to be put centrally in CRSC? */
+@font-face {
+	font-family: 'ellianarelles_path';
+	src: url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/fonts/ellianarelles_path-webfont.eot');
+	src: url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/fonts/ellianarelles_path-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/fonts/ellianarelles_path-webfont.ttf') format('truetype'),
+		 url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/fonts/ellianarelles_path-webfont.woff') format('woff'),
+		 url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/fonts/ellianarelles_path-webfont.svg#GillSansAltOneWGLRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* -- Reset CSS derived from CRSC global.css */
+body.ka { 
+	background-color: #FFF; 	/* Set background color to white instead of (default) gray */
+} 
+
+.ka h1,
+.ka h2,
+.ka h3,
+.ka h4,
+.ka h5,
+.ka h6 {
+	line-height: normal;
+	font-style: inherit;
+    font-weight: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.ka p {
+	margin: 0;
+}
+
+.ka ul {
+	list-style: none;
+}
+
+.ka li {
+	padding: 0;
+}
+
+/* KA specific styles */
+
+/* arrows */
+.ka .arrow-right,
+.ka .arrow-up,
+.ka .arrow-down,
+.ka .arrow-left {
+	width: 0; 
+	height: 0; 
+	display: -moz-inline-box;
+  	display: inline-block;
+	line-height: 0;
+ 	vertical-align: middle;
+ 	position: relative;
+ 	zoom: 1; 
+ 	*display: inline;
+}	
+
+.ka .arrow-right {
+	border-top: .31em solid transparent;
+	border-bottom: .31em solid transparent;
+	border-left: .31em solid #0b5ed7;
+	left: 0.25em;
+}
+
+.ka .arrow-up {
+	border-left: .31em solid transparent;
+	border-right: .31em solid transparent;
+	border-bottom: .31em solid #0b5ed7;
+}
+
+.ka .arrow-down {
+	border-left: .31em solid transparent;
+	border-right: .31em solid transparent;
+	border-top: .31em solid #0b5ed7;
+}
+
+.ka .arrow-left {
+	border-top: .31em solid transparent;
+	border-bottom: .31em solid transparent; 
+	border-right: .31em solid #0b5ed7;
+	right: 0.25em;
+}
+
+.ka .sep-soft {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_soft_bg.png) bottom no-repeat;
+	padding-bottom: 1px;
+}
+
+.ka hr.sep-soft {
+	height: 1px;
+	border: 0;
+}
+
+.lt-ie8 .ka hr.sep-soft {
+	background: none;
+	display: list-item;
+	list-style: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_soft_bg.png) inside;
+	filter: alpha(opacity=0);	/* gets rid of horizontal bar to right of image */
+	width: 0;					/* prevents tiling */
+}
+
+.ka .sep-soft-shadow {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_soft_shadow_bg.png) bottom no-repeat;
+	padding-bottom: 15px;
+}
+
+.ka hr.sep-soft-shadow {
+	height: 15px;
+	border: 0;
+	/*margin: 30px 0;*/
+	margin-left:-20px;
+}
+
+.lt-ie8 .ka hr.sep-soft-shadow {
+	background: none;
+	display: list-item;
+	list-style: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_soft_shadow_bg.png) inside;
+	filter: alpha(opacity=0);	/* gets rid of horizontal bar to right of image */
+	width: 0;					/* prevents tiling */
+}
+
+/* hide text visually */
+.ka .ir {
+	display: block; 
+	border: 0; 
+	text-indent: -999em; 
+	overflow: hidden; 
+	background-color: transparent; 
+	background-repeat: no-repeat; 
+	text-align: left; 
+	direction: ltr; 
+	*line-height: 0;
+}
+
+/* presentation helpers */
+.ka .box {
+	border: 1px solid #ebecee;
+}
+
+.ka .gradient-rl {
+	background-image: -webkit-linear-gradient(right, rgb(200,202,215) 83%, rgb(255,255,255) 100%);
+	background-image:    -moz-linear-gradient(right, rgb(200,202,215) 83%, rgb(255,255,255) 100%);
+	background-image:     -ms-linear-gradient(right, rgb(200,202,215) 83%, rgb(255,255,255) 100%);
+	background-image:      -o-linear-gradient(right, rgb(200,202,215) 83%, rgb(255,255,255) 100%);
+	background-image:        -webkit-gradient(linear, right top, left top, color-stop(0.83, rgb(200,202,215)), color-stop(1, rgb(255,255,255)));
+	background-image:         linear-gradient(right, rgb(200,202,215) 83%, rgb(255,255,255) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ffffff, endColorStr=#c9cbd8, GradientType=1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#c9cbd8, GradientType=1)";
+	zoom: 1;
+}
+
+.ka .gradient-bt {
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f2f2f6 100%); /* Chrome10+,Safari5.1+ */
+	background:    -moz-linear-gradient(top, #ffffff 0%, #f2f2f6 100%); /* FF3.6+ */
+	background:     -ms-linear-gradient(top, #ffffff 0%,#f2f2f6 100%); /* IE10+ */
+	background:      -o-linear-gradient(top, #ffffff 0%,#f2f2f6 100%); /* Opera 11.10+ */
+	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f6)); /* Chrome,Safari4+ */
+	background:         linear-gradient(to bottom, #ffffff 0%,#f2f2f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f6',GradientType=0 ); /* IE6-9 */
+	zoom: 1;
+}
+
+.ka .gradient-tb {
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(bottom, #ffffff 0%,#f2f2f6 100%); /* Chrome10+,Safari5.1+ */
+	background:    -moz-linear-gradient(bottom, #ffffff 0%,#f2f2f6 100%); /* FF3.6+ */
+	background:     -ms-linear-gradient(bottom, #ffffff 0%,#f2f2f6 100%); /* IE10+ */
+	background:      -o-linear-gradient(bottom, #ffffff 0%,#f2f2f6 100%); /* Opera 11.10+ */
+	background:        -webkit-gradient(linear, left bottom, left top, color-stop(0%,#ffffff), color-stop(100%,#f2f2f6)); /* Chrome,Safari4+ */
+	background:         linear-gradient(to top, #ffffff 0%,#f2f2f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	zoom: 1;
+}
+
+.ka .shadow-a {
+	-webkit-box-shadow: 0 1px 7px 1px rgba(0,0,0,0.11);
+	   -moz-box-shadow: 0 1px 7px 1px rgba(0,0,0,0.11);
+			box-shadow: 0 1px 7px 1px rgba(0,0,0,0.11);
+}
+
+.ka .box.gradient-rl {
+	padding: 1px 0px 1px 0;
+	border: 0;
+	border-right: 1px solid #c9cbd8;
+}
+
+.ka .box.gradient-rl .box-inner {
+	background: #fff;
+}
+
+.ka .box.shadow-b .box-bottom {
+	/* @TODO: Check if below is possible with CSS3 */
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_shadow_small_bg.png) top no-repeat;
+	background-size: 100% 14px;
+	height: 14px;
+	position: relative;
+	bottom: -15px;
+	margin-top: -14px;
+}
+
+/* Box shadow bottom-top-inside */
+.ka .box-shadow-bti {
+	border: 0;
+	border-top: 1px solid #c9cbd8;
+	border-bottom: 1px solid #c9cbd8;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_shadow_bg.png) top no-repeat #fafafa;
+} 
+
+.ka .box-shadow-bti .box-inner {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_shadow_inverse_bg.png) bottom no-repeat;
+	padding: 40px 0;
+}
+
+
+/* -- Buttons (Thanks to Bootstrap!) -- */
+.ka .btn {
+	display: inline-block;
+	*display: inline;
+	padding: 2px 25px;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	font-size: 11px;
+	font-weight: bold;
+	color: #4a5366;
+	line-height: 20px;
+	*line-height: 20px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	*background-color: #e7e7eb;
+	background-repeat: repeat-x;
+	background-image:        -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e7e7eb));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e7e7eb);
+	background-image:    -moz-linear-gradient(top, #ffffff, #e7e7eb);
+	background-image:     -ms-linear-gradient(top, #ffffff, #e7e7eb);
+	background-image:      -o-linear-gradient(top, #ffffff, #e7e7eb);
+	background-image:         linear-gradient(to bottom, #ffffff, #e7e7eb);
+	/* IE rounded corners do not work together with gradient */
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e7e7eb', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+	*zoom: 1;
+	border: 1px solid #bbbbbb;
+	*border: 0;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-color: #c1c3ce #c1c3ce #bfbfbf;
+	border-bottom-color: #a2a2a2;
+	-webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	      border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	 -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ka .btn:hover,
+.ka .btn.disabled,
+.ka.btn[disabled] {
+	color: #333333;
+	background-color: #e6e6e6;
+	*background-color: #d9d9d9;
+}
+
+.ka .btn:first-child {
+	*margin-left: 0;
+}
+
+.ka .btn:hover {
+	color: #333333;
+	text-decoration: none;
+	background-color: #e6e6e6;
+	*background-color: #d9d9d9;
+	/* Buttons in IE7 don't get borders, so darken on hover */
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	   -moz-transition: background-position 0.1s linear;
+	     -o-transition: background-position 0.1s linear;
+	        transition: background-position 0.1s linear;
+}
+
+.ka .btn:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.ka .btn.disabled,
+.ka .btn[disabled] {
+	cursor: default;
+	background-color: #e6e6e6;
+	background-image: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	      	box-shadow: none;
+}
+
+.ka .btn-primary {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #0b5ed7;
+	*background-color: #0b5ed7;
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	background-image:        -webkit-gradient(linear, 0 0, 0 100%, from(#6fa9ff), to(#0b5ed7));
+	background-image: -webkit-linear-gradient(top, #6fa9ff, #0b5ed7);
+	background-image:    -moz-linear-gradient(top, #6fa9ff, #0b5ed7);
+	background-image:     -ms-linear-gradient(top, #6fa9ff, #0b5ed7);
+	background-image:      -o-linear-gradient(top, #6fa9ff, #0b5ed7);
+	background-image:         linear-gradient(to bottom, #6fa9ff, #0b5ed7);
+	/* IE rounded corners do not work together with gradient */
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#6fa9ff', endColorstr='#0b5ed7', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.ka .btn-primary:hover,
+.ka .btn-primary.disabled,
+.ka .btn-primary[disabled] {
+	color: #ffffff;
+	background-color: #0b5ed7;
+	*background-color: #003bb3;
+}
+
+.ka .btn-group {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+/* -- Layout -- */
+.ka .shell {
+	text-align: left;
+	position: relative; /* for z-index */
+	z-index: 0;
+	background: url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/shell_tile_bg.jpg') repeat-x center 0 scroll #FFF;
+	min-width:960px;
+}
+
+.ka .shell-inner {
+	min-height: 922px; /* prevent cropping */
+	/*background: url(../img/shell_inner_bg.jpg) no-repeat scroll center 0 transparent;*/
+}
+
+/* -- Navigation tabs -- */
+.ka .nav.nav-main {
+	background: transparent;
+	width: 962px;
+	margin: 0 auto;
+	z-index: 1;
+	height: 58px;
+}
+
+/* reflow elements after floating content */
+.ka .nav.nav-main:after { 
+	content: "."; 
+	clear: both; 
+	height: 0; 
+	display: block; 
+}
+
+.ka .nav.nav-main > li {
+	float: left;
+	display: inline-block;
+	text-align: center;
+	width: 237px; /* is there a way to use 'auto'? */
+	border: 1px solid #CCC;
+	cursor: default; /* prevent cursor: text */
+	
+	margin: 28px 1px -3px 0;
+	height: 25px;
+	background-color: #FFF;
+	padding-top: 5px;
+	
+	/* Generalize the following into a border-radius class (incl IE7 compat)? */
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-radius-topleft: 5px;
+	-webkit-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	
+	border-bottom: none;
+}
+
+/* Active tab or tabs being hovered */
+.ka .nav.nav-main > .active,
+.ka .nav.nav-main > li:hover {
+	margin-top: 18px;
+	height: 30px;
+	
+	padding-top: 10px;
+}
+
+/* set default font style for element content + links within */
+.ka .nav.nav-main > li,
+.ka .nav.nav-main a {
+	position:relative;
+	color: #AAA;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* override default font style with hover/active tab font styles */
+.ka .nav.nav-main > .active,
+.ka .nav.nav-main > li:hover,
+.ka .nav.nav-main > .active a,
+.ka .nav.nav-main > li:hover a {
+	font-size: 18px;
+	color: #3C3;	
+	font-weight: normal;
+}
+
+.ka .container,
+.ka.container {
+	background-color: #ffffff;
+	padding: 0 20px;
+	width: 920px;
+	margin: 0 auto;
+	text-align: left;
+	min-height:800px;
+}
+
+.ka .fullwidth {
+	width: 960px;
+}
+
+.ka.container .fullwidth,
+.ka .container .fullwidth {
+	margin-left: -20px;
+	float: none;
+}
+
+/* -- image container for background leaf and left/right gradients */
+.ka .image-container {
+	position: absolute;
+	width: 100%;
+	background: transparent;
+	overflow:hidden;
+	z-index:-1;
+}
+
+.ka .images {
+	margin: 0 auto;
+	/*padding: 0 60px 0 60px;*/
+}
+
+/* leaf */
+.ka .image-leaf {
+	position: absolute;
+	background: url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/leaf.jpg') no-repeat center top;
+	width: 600px;
+	height: 350px;
+	margin: 0px auto auto -378px;
+	z-index: -1;
+}
+
+.ka .image-leaf-overlay {
+	position:absolute;
+	width:80px;
+	height:45px;
+	background: url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/leaf-overlay3.png') no-repeat left top;
+	z-index:0;
+	margin:-11px 0 0 -21px;
+	/*margin:13px 0 0 -21px;*/
+}
+
+.lt-ie8 .ka .image-leaf-overlay {
+	margin:-9px 0 0 -51px;
+}
+
+/* left/right gradient */
+.ka .gradient {
+	background-repeat: no-repeat;
+	background-position: top left;
+	
+	width: 60px;
+	height: 1000px;
+}
+
+.ka .gradient.left {
+	margin-left: -60px;
+	float: left;
+	background-image: url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/gradient-left.png');
+}
+
+.ka .gradient.right {
+	margin-right: -60px;
+	float: right;
+	background-image: url('../img/gradient-right.png');
+}
+
+/* -- buttons */
+.ka .button-play {
+	display: block;
+	width: 59px;
+	height: 61px;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/button_play_bg.png) no-repeat;
+}
+
+.ka .button-play-large {
+	display: block;
+	width: 110px;
+	height: 110px;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/button_play_large_bg.png) no-repeat;
+}
+
+.ka .image > .button-play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -28px;
+	margin-top: -30px;
+}
+
+.ka .image > .button-play-large {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -55px;
+	margin-left: -55px;
+}	
+
+.ka .arrow-curly-ld,
+.ka .arrow-curly-rd {
+	display: inline-block;
+	width: 78px;
+	height: 37px;
+	vertical-align: middle;
+}
+
+.ka .arrow-curly-rd {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/arrow_rd_blue.png) 0 0 no-repeat;
+}
+
+.ka .arrow-curly-ld {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/arrow_ld_blue.png) 0 0 no-repeat;
+}
+
+.ka .button-prev {
+	display: block;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/arrow_thin_l_white_large.png) center center no-repeat #000000;
+	height: 41px;
+	width: 33px;
+}
+
+.ka .button-next {
+	display: block;
+	background: url(../img/arrow_thin_r_white_large.png) center center no-repeat #000000;
+	height: 41px;
+	width: 33px;
+}
+
+/* -- Tip component 
+	  Only works on a white background
+	  @TODO degrade to CSS borders when no marker is required.
+*/
+.ka .tip {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	position: relative;
+}
+
+.ka .tip-content {
+	background: #fff;
+}
+
+.ka .tip-dashed {
+	background: url(../img/tip_dashed_bl_bg.png) no-repeat scroll left bottom #8cbaff;
+	padding-bottom: 2px;
+	padding-left: 2px;
+}
+
+.ka .tip-dashed .tip-inner {
+	background: url(../img/tip_dashed_tr_bg.png) no-repeat scroll right top #8cbaff;
+	padding-top: 2px;
+	padding-right: 2px;
+}
+
+.ka .tip-dashed .tip-marker {
+	height: 43px;
+	position: absolute;
+	width: 46px;
+}
+
+.ka .tip-dashed.tip-marker-tr .tip-marker {
+	/* @TODO: soften the marker more.. TBD by Design */
+	background: url(../img/tip_dashed_marker_tr_bg.png) no-repeat scroll 0 0 #8cbaff;
+	right: -44px;
+	top: 0;
+}
+
+.ka .tip-dashed.tip-marker-tl .tip-marker {
+	/* @TODO: soften the marker more.. TBD by Design */
+	background: url(../img/tip_dashed_marker_tl_bg.png) no-repeat scroll 0 0 #8cbaff;
+	left: -44px;
+	top: 0;
+}
+
+
+/* Example how to add mulitple colors */
+.ka .tip-orange,
+.ka .tip-orange .tip-inner,
+.ka .tip-orange .tip-marker { 
+	background-color: #ffcb99!important; 
+}
+
+/* -- Icon ratings component */
+.ka .rating-icon {
+	height: 17px; 
+	width: 49px; 
+	background: url(../img/icon_rating_sprite.png) 0 0 no-repeat;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+}
+
+.ka .rating-icon.rating5 { background-position: 0px -17px;  }
+.ka .rating-icon.rating4 { background-position:-10px -17px; }
+.ka .rating-icon.rating3 { background-position:-20px -17px; }
+.ka .rating-icon.rating2 { background-position:-30px -17px; }
+.ka .rating-icon.rating1 { background-position:-40px -17px; }
+
+/* -- Social media links component */
+.ka .socialmedia-links {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ka .socialmedia-links li {
+	display: block;
+	float: left;
+	margin: 0 2px;
+	padding: 0;
+}
+
+/* -- Icons */
+.ka .icon {
+	height: 24px;
+	width: 24px;
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	direction: ltr;
+	text-align: left;
+}
+
+.ka .icon-facebook {
+	background: url(../img/icon_square_facebook_large.png) no-repeat scroll 0 0 transparent;
+}
+
+.ka .icon-twitter {
+	background: url(../img/icon_square_twitter_large.png) no-repeat scroll 0 0 transparent;
+}
+
+.ka .icon-rss {
+	background: url(../img/icon_square_rss_large.png) no-repeat scroll 0 0 transparent;
+}
+
+/* -- Main header component */
+.ka .mainheader-category {
+	color: #fff;
+	font-family: gs_italic, Verdana, Arial;
+	font-size: 32px;
+	text-shadow: 0em 0em 0.1em #000;
+	background: url(../img/mainheader_bg.jpg) no-repeat;
+	line-height: 55px;
+	padding: 0 10px;
+}
+
+/* -- Herobanner component - fixed size */
+.ka .herobanner-large {
+	padding-left: 300px;
+	padding-top: 110px;
+	padding-right: 285px;
+	height: 383px;
+	width: 375px;
+	overflow: hidden;
+}
+
+.ka .herobanner-large .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 56px;
+	font-weight: normal;
+	line-height: normal;
+	color: #f56800;
+	margin-bottom: 20px;
+}
+
+.ka .herobanner-large .subheader {
+	font-family: gs_regular, Verdana, Arial;
+	font-size: 18px;
+	color: #5d6678;
+	font-weight: normal;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+
+.ka .herobanner-large .readmore {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+/* -- Herobanners carousel */
+.ka .herobanners .carousel-nav {
+	bottom: 15px;
+}
+
+.ka .herobanners .carousel-content {
+	height: 493px;
+}
+
+.ka .subcategories-header {
+	color: #7dba00;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 48px;
+	line-height: normal;
+	/* temp */
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/koriander_177x149.png) 100% 0 no-repeat;
+	position: relative;
+	z-index: 1;
+	margin-top: -20px;
+	padding-top: 60px;
+	padding-bottom: 35px;
+	padding-right: 190px;
+}
+
+/* -- Subcategory component */
+.ka .subcategory .image {
+	display: block;
+	text-align: center;
+	height: 310px;
+	line-height: 310px;
+	overflow: hidden;
+	font-size: 0;
+}
+
+.ka .subcategory .image img {
+	vertical-align: middle;
+}
+
+.ka .subcategory .box {
+	padding: 10px 20px;
+}
+
+.ka .subcategory .box.shadow-b .box-bottom {
+	bottom: -25px;
+}
+
+.ka .subcategory .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	line-height: normal;
+	color: #315208;
+	font-size: 18px;
+}
+
+.ka .subcategory .readmore {
+	font-family: gs_regular, Verdana, Arial;
+	line-height: normal;
+	font-size: 14px;
+}
+			
+.ka .subcategory .description {
+	color: #5d6678;
+	font-size: 13px;
+	margin: 20px 0 0 0;
+	line-height: 24px;
+	padding: 0 10px;
+}
+
+.ka .subcategory .price {
+	color: #992c96;
+	font-size: 11px;
+	font-weight: bold;
+	display: inline;
+}
+
+.ka .subcategory .functions-grid {
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.ka .subcategory .functions-grid .function {
+	float: left;
+  	margin: 2px;
+}
+
+.ka .subcategory .functions-grid.cols2 .function {
+	width: 48.5%;
+}
+
+.ka .subcategory .function {
+	color: #5d6678;
+	font-size: 10px;
+	line-height: 18px;
+}
+
+.ka .subcategory .function.odd {
+	background-color: #f4f4f4;
+}
+
+.ka .subcategory .function.even {
+	background-color: #dcdcdc;
+}
+
+.ka .subcategory .function span {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/icon_check_small.png) 0 0 no-repeat;
+	padding-left: 22px;
+	margin: 3px 10px;
+	display: block;
+}
+
+.ka .subcategory .function .lines2 {
+	height: 46px;
+}
+
+.ka .subcategory .function .lines3,
+.ka .subcategory .function .lines4 {
+	height: 74px;
+}
+
+.ka .subcategory .function .lines5 {
+	height: 102px;
+}
+
+/* -- Sub category collection sub class - */
+.ka .subcategory-collection .image {
+ 	height: 250px;
+ 	line-height: 250px;
+}
+
+.ka .subcategory-collection .box {
+ 	text-align: center;
+}
+
+.ka .subcategory-collection .price {
+ 	display: inline;
+}
+
+
+/* -- Subcategories grid */
+.ka .subcategories-grid {
+	margin-left: -20px;
+	overflow: hidden;
+}
+
+.ka .subcategories-grid .subcategory {
+	float: left;
+  margin: 0 0 0px 20px;
+	padding-bottom: 50px;
+}
+
+.ka .subcategories-grid.cols4 .subcategory {
+	width: 215px;
+}
+
+.ka .subcategories-grid.cols3 .subcategory {
+	width: 292px;
+}
+
+.ka .subcategories-grid.cols2 .subcategory {
+	width: 448px;
+}
+
+/* -- Local promotion banner component */
+.ka .promotionbanners {
+	margin-top: 15px;
+}
+
+/* -- Collection banner component - fixed size */
+.ka .collectionbanner {
+	width: 300px;
+	height: 159px;
+	overflow: hidden;
+	padding-left: 280px;
+	padding-top: 30px;
+	padding-right: 340px;
+}
+
+.ka .collectionbanner a,
+.ka .collectionbanner a:visited,
+.ka .collectionbanner a:hover,
+.ka .collectionbanner a:active { 
+	text-decoration: none;
+}
+
+.ka .collectionbanner .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 28px;
+	font-weight: normal;
+	color: #f58f08;
+}
+
+.ka .collectionbanner .subheader {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 18px;
+	margin: 0;
+	color: #5d6678;
+	font-weight: normal;
+	line-height: normal;
+	padding: 0;
+}
+
+/* -- Heroproduct banner component - fixed size */
+.ka .heroproductbanner {
+	width: 410px;
+	height: 159px;
+	overflow: hidden;
+	padding-left: 530px;
+	padding-top: 30px;
+	padding-right: 20px;
+}
+
+.ka .heroproductbanner .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 28px;
+	font-weight: normal;
+	color: #7cbd2a;
+	margin-bottom: 7px;
+}
+
+.ka .heroproductbanner .copy {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	margin: 0;
+	color: #5d6678;
+	font-weight: normal;
+	line-height: normal;
+	padding: 0;
+	margin-bottom: 7px;
+}
+
+/* -- Collection banner - breakfast component - fixed size */
+.ka .collectionbanner-breakfast {
+	margin-top: 50px;
+	width: 350px;
+	height: 121px;
+	overflow: hidden;
+	border: 1px solid #efeff4;
+	padding-left: 187px;
+	padding-top: 33px;
+	padding-right: 370px;
+}
+
+.ka .collectionbanner-breakfast .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 36px;
+	font-weight: normal;
+	color: #f56800;
+}
+
+.ka .collectionbanner-breakfast .subheader {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 19px;
+	margin: 0;
+	color: #5d6678;
+	font-weight: normal;
+	line-height: normal;
+	padding: 0;
+}	
+
+/* -- Category banner component - flexible */
+.ka .categorybanners-header {
+	font-family: gs_light_italic, Verdana, Arial;
+	font-size: 30px;
+	line-height: normal;
+	color: #7cbd2a;
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+
+.ka .categorybanner {
+	height: 117px;
+	padding: 13px!important;
+	background-repeat: no-repeat!important;
+	background-position:right top;
+	border:2px solid #FFF;
+}
+
+.ka .categorybanner .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 24px;
+	line-height: normal;
+	color: #f58f08;
+	width: 55%;
+	height: 3.7em;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.ka .categorybanner a {
+	display: block;
+	width: 55%;
+	font-weight: bold;
+}
+
+/* -- Category banner grid */
+.ka .categorybanners-grid {
+	margin-left: -20px;
+	overflow: hidden;
+}
+
+.ka .categorybanners-grid > li {
+	float: left;
+  margin: 0 0 30px 20px;
+	background:url('/etc/designs/ebazzarresp/pcarouselclientlibs/img/banner_category_small_bg.png') repeat-x left bottom;
+}
+
+.lt-ie9 .ka .categorybanners-grid > li {
+	border:1px solid #EEE;
+	margin-left:18px;
+}
+
+.ka .categorybanners-grid.cols3 > li {
+	width: 292px;
+}
+
+
+/* -- Recipes recipes component - fixed */
+.ka .recipes-grid .recipe {
+	width: 160px;
+	height: 180px;
+	position: relative;
+}
+
+.ka .recipes-grid .recipe img {
+	margin: 6px 6px 3px 6px;
+}
+
+.ka .recipes-grid .recipe a {
+	font-size: 10px;
+	margin: 0 10px 10px 10px;
+	display: block;
+	line-height: 13px;
+}
+
+.ka .recipes-grid .recipe .button-play {
+	display: block;
+	position: absolute;
+	left: 45px;
+	top: 38px;
+	margin: 0;
+}
+
+.ka .recipes-grid .recipe-type1 {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipethumb1_bg.png) 0 0 no-repeat;
+}
+
+.ka .recipes-grid .recipe-type1 img {
+	-webkit-transform: rotate(-1deg) ;
+	   -moz-transform: rotate(-1deg) ;
+		 -o-transform: rotate(-1deg) ;
+			transform: rotate(-1deg) ;
+}
+
+.ka .recipes-grid .recipe-type2 {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipethumb2_bg.png) 0 0 no-repeat;
+}
+
+.ka .recipes-grid .ka .recipe-type2 img {
+	-webkit-transform: rotate(.5deg) ;
+	   -moz-transform: rotate(.5deg) ;
+	     -o-transform: rotate(.5deg) ;
+		 	transform: rotate(.5deg) ;
+}
+
+.ka .recipes-grid .recipe-type3 {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipethumb3_bg.png) 0 0 no-repeat;
+}
+
+.ka .recipes-grid .ka .recipe-type3 img {
+	-webkit-transform: rotate(.5deg) ;
+	   -moz-transform: rotate(.5deg) ;
+		 -o-transform: rotate(.5deg) ;
+			transform: rotate(.5deg) ;
+}
+
+/* -- Recipes grid recipe component - flexible */
+.ka .recipes-grid {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+.ka .recipes-grid .recipe {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	text-align: left;
+}
+
+.ka .recipes-grid .recipe {
+	margin-bottom: 20px;
+	margin-left: 25px;
+}
+
+/* -- Blogpost frame (small) component - fixed */
+.ka .blogpost .header {
+	color: #F58F08;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.ka .blogpost .copy {
+	font-size: 12px;
+}
+
+.ka .blogpost .readmore {
+	font-size: 10px;
+}
+
+.ka .blogpost-frame {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/blogpost_frame_bg.png) 0 0 no-repeat;
+	float: right;
+	width: 310px;
+	height: 385px;
+	position: relative;
+	margin-right: 50px;
+}
+
+.ka .blogpost-frame-header {
+	font-size: 25px;
+	color: #323284;
+	font-family: ellianarelles_path;
+	font-style: italic;
+	margin: 15px 25px;
+	-webkit-transform: rotate(-2deg) ;
+	   -moz-transform: rotate(-2deg) ;
+		 -o-transform: rotate(-2deg) ;
+			transform: rotate(-2deg) ;
+}
+
+.ka .blogpost-frame .blogpost .image {
+	margin-left: 18px;
+	margin-bottom: 10px;
+	-webkit-transform: rotate(-1deg) ;
+	   -moz-transform: rotate(-1deg) ;
+		 -o-transform: rotate(-1deg) ;
+			transform: rotate(-1deg) ;
+}
+
+.ka .blogpost .header,
+.ka .blogpost .copy,
+.ka .blogpost .readmore {
+	margin-left: 25px;
+	margin-bottom: 10px;
+}
+
+.ka .blogpost-frame .blogpost .readmore {
+	position: absolute;
+	bottom: 35px;
+	margin-bottom: 0;
+}
+
+/* -- Blogpost frame (wide) component - fixed */
+.ka .blogpost-frame-wide {
+	margin: 0 90px 16px 115px;
+	width: 755px;
+	background: none; /* frame has been included in container background image for performance reasons */
+	float: none;
+	height: 237px;
+}
+
+.ka .blogpost-frame-wide .blogpost {
+	padding: 30px 30px 30px;
+}	
+
+.ka .blogpost-frame-wide .blogpost .image {
+	float: left;
+	margin: 0;
+	padding-right: 20px;
+}
+
+.ka .blogpost-frame-wide .blogpost .header {
+	margin-top: 0;
+}
+
+.ka .blogpost-frame-wide .blogpost .header,
+.ka .blogpost-frame-wide .blogpost .copy,
+.ka .blogpost-frame-wide .blogpost .readmore {
+	margin-left: 0;
+	margin-right: 0;
+}	
+
+.ka .blogpost-frame-wide .blogpost .readmore {
+	position: static;
+	bottom: auto;
+	margin-top: 12px;
+	font-size: 12px;
+}
+
+/* -- Recipe and blogpost container components */
+.ka .recipes-header,
+.ka .blogpost-header {
+	font-family: ellianarelles_path, Verdana, Arial;
+	font-style: italic;
+	font-size: 25px;
+	color: #323284;
+	margin: 40px 10px 10px;
+}
+
+.ka .blogpost-header {
+	margin-left: 110px;
+	margin-right: 110px;
+}
+
+.ka .blogpost-container {
+	background: url(../img/blogpost_container_bg.jpg) 0 0 no-repeat;
+	display: inline-block;
+	zoom: 1;
+	position: relative;
+	height: 251px;
+}
+
+.ka .recipes-container,
+.ka .recipes-and-blogpost-container {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/wooden_plate_959x425.jpg) 0 0 no-repeat;
+	padding-top: 20px;
+	position: relative;
+	display: inline-block;
+	zoom: 1;
+	width: 960px;
+}
+
+.ka .recipes-container .topright,
+.ka .recipes-and-blogpost-container .topright,
+.ka .blogpost-container .topright {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/rosemary_119x256.png) no-repeat scroll 0 0 transparent;
+    height: 256px;
+    position: absolute;
+    right: 0;
+    top: -38px;
+    width: 119px;
+    z-index: 1;
+}
+
+.ka .recipes-container .bottomleft,
+.ka .recipes-and-blogpost-container .bottomleft,
+.ka .blogpost-container .bottomleft {
+	background: url(../img/parsely_127x118.png) no-repeat scroll 0 0 transparent;
+    bottom: -44px;
+    height: 127px;
+    left: 0;
+    position: absolute;
+    width: 118px;
+}
+
+.ka .recipes-and-blogpost-container .recipes-grid {
+	width: 600px;
+	float: left;
+}
+
+.ka .recipes-and-blogpost-container .items1,
+.ka .recipes-and-blogpost-container .items2,
+.ka .recipes-and-blogpost-container .items3 {
+	text-align: center;
+}	
+
+.ka .recipes-and-blogpost-container .items1 .recipe,
+.ka .recipes-and-blogpost-container .items2 .recipe,
+.ka .recipes-and-blogpost-container .items3 .recipe {
+	margin-top: 115px;
+}
+
+.ka .recipes-container .recipes-grid {
+	text-align: center;
+}
+
+.ka .recipes-container .items2 .recipe,
+.ka .recipes-container .items3 .recipe {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+/* -- Experience - Homepage -- */
+
+/* -- Home intro component */
+.ka  .statement {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/paper_note_bg.png);
+	width: 215px;
+	height: 181px;
+	padding: 35px 20px 0 20px;
+}
+
+.ka .statement .header {
+	font-family: ellianarelles_path, Verdana, Arial;
+	font-style: italic;
+	font-size: 25px;
+	color: #323284;
+	margin-bottom: 40px;
+}	
+
+.ka .statement .copy {
+	font-size: 12px;
+	line-height: 18px;
+	color: #5d6678;
+}
+
+.ka .homeintro {
+	position: relative;
+}
+
+.ka .sep-soft-shadow-herb {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/sep_soft_shadow_herb_right_bg.png)  bottom no-repeat;
+	padding-bottom: 83px;
+	
+}
+
+.ka .homeintro .topright {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/parsely_118x68.png) 0 0 no-repeat;
+	width: 118px;
+	height: 68px;
+	top: 0px;
+	position: absolute;
+	right: 0;
+	z-index: 20;
+}
+
+.ka .homeintro .statement {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0 30px;
+	z-index: 20;
+}
+
+.ka .homeintro .headerbanner {
+	width: 960px;
+	height: 299px;
+	overflow: hidden;
+}
+
+.ka .homeintro-hero .headerbanner {
+	height: 337px;
+}
+
+
+.ka .homeintro-hero .heroproduct {
+	padding: 30px 260px;
+	position: relative;
+}
+
+.ka .homeintro-hero .heroproduct .header {
+	color: #7dba00;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 27px;
+	line-height: normal;
+	margin-bottom: 15px;
+}
+
+.ka .homeintro-hero .heroproduct .subheader {
+	color: #5d6678;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 19px;
+	line-height: normal;
+	margin-bottom: 25px;
+}
+
+.ka .homeintro-hero .heroproduct .readmore	{
+	font-weight: bold;
+}
+
+.ka .homeintro-hero .heroproduct .image,
+.ka .homeintro-hero .heroproduct .subimage {
+	position: absolute;
+	z-index: 1;
+}
+
+.ka .homeintro-hero .heroproduct .image {
+	bottom: 0;
+	left: 0;
+}
+
+.ka .homeintro-hero .heroproduct .subimage {
+	top: -30%;
+	right: 60px;
+	border: 5px solid #ffffff;
+	-webkit-transform: rotate(3deg) ;
+	   -moz-transform: rotate(3deg) ;
+		 -o-transform: rotate(3deg) ;
+			transform: rotate(3deg) ;
+	-webkit-box-shadow: 0 1px 7px 1px rgba(0,0,0,0.11);
+	   -moz-box-shadow: 0 1px 7px 1px rgba(0,0,0,0.11);
+			box-shadow: 0 1px 7px 1px rgba(0,0,0,0.11);
+}
+
+.ka .homeintro-hero .recipes-header {
+	position: relative;
+	margin: -70px 120px;
+	float: right;
+}
+
+.ka .homeintro-hero .arrow-curly-ld {
+	margin-top: 1em;
+}
+
+/* -- Various home components */
+
+/* - Top story */
+.ka .topstory {
+	overflow: hidden;
+}
+
+.ka .topstory .image {
+	float: left;
+	margin-right: 20px;
+}
+
+.ka .topstory-small .image {
+	width: 111px;
+	overflow: hidden;
+	height: 165px;
+}
+
+.ka .topstory .header {
+	color: #f56800;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 24px;
+	line-height: normal;
+	margin-bottom: 7px;
+}
+
+.ka .topstory .created {
+	color: #5d6678;
+	font-family: Arial, Verdana;
+	font-size: 12px;
+	margin-bottom: 7px;
+}
+
+.ka .topstory .copy {
+	color: #5d6678;
+	font-size: 12px;
+	margin-bottom: 7px;
+}
+
+.ka  .ka .topstory .readmore {
+	font-weight: bold;
+}
+
+/* - Popular articles */
+.ka  .populararticles .populararticles-list {
+	font-size: 12px;
+	color: #5d6678;
+	padding-left: 20px;
+}
+
+.ka  .populararticles .populararticles-list li {
+	margin-bottom: 10px;
+}
+
+.ka .topstories-header,
+.ka .populararticles-header {
+	font-family: gs_light_italic, Verdana, Arial;
+	font-size: 22px;
+	line-height: normal;
+	color: #7dba00;
+	margin-bottom: 20px;
+}
+
+.ka .topstories .carousel-item {
+	height: 173px;
+}
+
+/* - Blog articles wrapper */
+.ka .blogarticles {
+	overflow: hidden;
+}
+
+.ka .blogarticles .topstories,
+.ka .blogarticles .populararticles {
+	float: left;
+}
+
+.ka .blogarticles .topstories {
+	width: 634px;
+}
+
+.ka .blogarticles .populararticles {
+	width: 260px;
+	margin-left: 25px;
+}
+
+.ka .reviewteaser {
+	border: 1px solid #efeff4;
+	position: relative;
+	padding: 15px 15px 0 135px;
+}
+
+.ka .reviewteaser .productimage {
+	position: absolute;
+	bottom: 7px;
+	z-index: 1;
+	width: 100px;
+	float: left;
+	left: 15px;
+}
+
+.ka .reviewteaser .rating {
+	margin-bottom: 7px;
+}
+
+.ka .reviewteaser .copy {
+	color: #5D6678;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.ka .reviewteaser .locationimage { 
+	margin-bottom: 7px;
+}	
+
+.ka .reviewquote {
+	padding: 15px;
+}
+
+.ka .reviewquote .quote {
+	font-family: gs_light_italic, Verdana, Arial;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: normal;
+	color: #5c005c;
+	display: block;
+}
+
+.ka .reviewquote .author {
+	color: #5D6678;
+    font-size: 12px;
+}
+
+.ka .relatedreviews:before,
+.ka .relatedreviews:after {
+	display: table;
+	content: "";
+}
+
+.ka .relatedreviews:after {
+	clear: both;
+}
+
+.ka .relatedreviews .reviewquote {
+	width: 400px;
+	float: left;
+	margin-left: 20px;
+}
+
+.ka .relatedreviews .reviewteaser {
+	width: 318px;
+	float: left;
+}	
+
+.ka .relatedrecipes {
+	overflow: hidden;
+	padding-top: 7px;
+}
+
+.ka .relatedrecipes .header {
+	color: #f56800;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 24px;
+	line-height: normal;
+	margin-bottom: 7px;
+}
+
+.ka .relatedrecipes .copy {
+	color: #5d6678;
+	font-size: 12px;
+	margin-bottom: 7px;
+}
+
+.ka .relatedrecipes .recipes-grid {
+	float: left;
+	margin-right: 15px;
+}
+
+.ka .relatedrecipes .recipe-info {
+	padding: 10px 15px 0px 15px;
+}
+
+.ka .topstories-blog .topstory {
+	float: left;
+	width: 470px;
+	margin-left: 20px;
+	margin-top :20px;
+}
+
+/* -- Banner wrap component - fixed width */
+.ka .bannerwrap {
+	width: 990px;
+	background: url(../img/banner_wrap_bg.png) no-repeat 0 100% transparent;
+	padding-bottom: 13px;
+	margin-left: -15px;
+}
+
+.ka .bannerwrap-inner {
+	background-color: #ffffff;
+	height: 186px;
+	overflow: hidden;
+}
+
+.ka .bannerwrap .carousel .carousel-item {
+    width: 990px;
+    height: 186px;
+}
+
+/* - Overrides for eligble bannerwrap components */
+.ka .bannerwrap .relatedreviews {
+    padding: 12px 15px 0 15px;
+}
+
+.ka .bannerwrap .relatedreviews .reviewteaser {
+	height: 147px;
+	overflow: hidden;
+}
+
+.ka .bannerwrap .collectionbanner {
+	float: right;
+}
+
+
+/* -- Hero banner component */
+.ka .herobanner {
+	padding-left: 280px;
+	padding-top: 20px;
+	padding-right: 280px;
+	height: 325px;
+	width: 400px;
+	overflow: hidden;
+}
+
+.ka .herobanner .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: normal;
+	color: #7dba00;
+	margin-bottom: 20px;
+}
+
+.ka .herobanner .subheader {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 19px;
+	color: #5d6678;
+	font-weight: normal;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+
+.ka .herobanner .readmore {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.ka .herobanner-container .recipes-header {
+    margin: -20px 150px 0 150px;
+    position: relative;
+}
+
+.ka .herobanner-container .recipes-header .arrow-curly-rd {
+	margin-top: 1em;
+}
+
+.ka .herobanner-container .recipes-grid {
+	margin-top: 20px;
+}
+
+/* -- Experience - Recipe Home -- */
+.ka .recipeinfo .label {
+	font-weight: bold;
+}
+
+.ka .recipeinfo-horizontal > li {
+	display: inline;
+	margin-right: 15px;
+}
+
+.ka .mainrecipe {
+	overflow: hidden;
+}
+
+.ka .mainrecipe-image {
+	float: left;
+	margin-right: 20px;
+	display: inline;
+	position: relative;
+}
+
+.ka .mainrecipe .header {
+	color: #f56800;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 32px;
+	line-height: normal;
+	margin-bottom: 10px;
+}
+
+.ka .mainrecipe .copy {
+	color: #888b9c;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.ka .mainrecipe .readmore {
+	font-size: 12px;
+}
+
+.ka .mainrecipe-content {
+	position: relative;
+	float: right;
+	width: 330px;
+	height: 281px;
+}
+
+.ka .mainrecipe-content .recipeinfo {
+	position: absolute;
+	bottom: 0;
+}
+
+.ka .mainrecipe-content .subimage {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.ka .recipesubcats-header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 32px;
+	line-height: normal;
+	color: #f56800;
+	margin-bottom: 10px;
+}
+
+/* -- recipe tile item - fixed */
+.ka .recipesubcat {
+	width: 224px;
+	height: 425px; /* 374 */
+	overflow: hidden;
+}
+
+.ka .recipesubcat .image {
+	width: 224px;
+	height: 224px;
+	overflow: hidden;
+}
+
+.ka .recipesubcat .header {
+	color: #994100;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 21px;
+	line-height: normal;
+	margin: 7px 0px;
+}
+
+.ka .recipesubcat .copy {
+	color: #888b9c;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.ka .recipesubcat .readmore {
+	font-size: 12px;
+}
+
+.ka .recipesubcat .prodimage {
+	float: right;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	display: inline;
+	margin-left: 10px;
+}
+
+/* -- recipe tile grid - fixed */
+.ka .recipesubcats-grid {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	clear: both;
+	overflow: hidden;
+	/* necessary due to current grid including 22px margins left/right */
+	width: 940px;
+	margin-left: -7px;
+}
+
+.ka .recipesubcats-grid .recipesubcat {
+	margin: 0;
+	padding: 5px 0 10px 7px;
+	float: left;
+}
+
+.ka .recipesubcats-grid .recipesubcat:hover {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipetile_hover_bg.png);
+	padding-right: 7px;
+	margin-right: -7px;
+}
+
+/* -- Experience - Recipe Sub categories -- */
+.ka .content-wrapper:before,
+.ka .content-wrapper:after {
+	display: table;
+	content: "";
+}
+
+.ka .content-wrapper:after {
+	clear: both;
+}
+
+.ka .maincontent {
+	margin: 0 20px 0 17px;
+	width: 680px;
+	float: right;
+}
+
+.ka .aside {
+	float: left;
+	margin-left: 20px;
+	width: 223px;
+}
+
+.ka .mainheader {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 37px;
+	line-height: normal;
+	color: #f56800;
+	margin-bottom: 10px;
+}
+
+/* -- Quick search component */
+.ka .searchform {
+	width: 186px;
+}
+
+.ka .quicksearch {
+	border: 1px solid #cccedb;
+	width: 192px;
+	overflow: hidden;
+}
+
+.ka .quicksearch .input {
+	color: #252f47;
+	font-size: 12px;
+	border: 0;
+	height: 18px;
+	line-height: 18px;
+	margin: 3px 0 3px 5px;
+	padding: 0;
+	width: 160px;
+	float: left; /* defeat IE top/bottom margin bug */
+	-webkit-appearance: textfield;
+}
+
+/* @IMPORTANT: placeholder selectors should be placed separately */
+.ka .quicksearch .input::-webkit-input-placeholder {
+  color: #888b9c;
+}
+
+.ka .quicksearch .input:-moz-placeholder {
+  color: #888b9c;
+}
+
+.ka .quicksearch .input:-ms-input-placeholder {
+  color: #888b9c;
+}
+
+.ka .quicksearch .submit {
+	overflow: hidden;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/icon_magnifier_grey.png) no-repeat 0 0 transparent;
+	width: 17px;
+	height: 17px;
+	float: right; /* proper positioning cross browser */
+	margin: 3px 5px 0px 5px;
+	font-size: 1px;
+	vertical-align: middle;
+	text-indent: -999em;
+	cursor: pointer;
+	line-height: 0;
+	border: 0;
+}
+
+.ka .quicksearch .input:focus,
+.ka .quicksearch .submit:focus {
+	outline: none;
+}
+
+.ka .quicksearch .submit:active {
+	-ms-background-position-x: 1px;		
+    -ms-background-position-y: 1px;
+}
+
+/* -- Breadcrumb component - vertical */
+.ka .breadcrumb-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ka .breadcrumb-list > li {
+	list-style: none;
+	margin: 0;
+	padding: 0 13px;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/arrow_thin_l_blue.png) no-repeat 0 center;
+	font-size: 12px;
+}
+
+.ka .breadcrumb-list .count {
+	color: #5d6678;
+}
+
+/*-- Product info component */
+.ka .productinfo {
+
+}
+
+.ka .productinfo .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 20px;
+	line-height: normal;
+	color: #0e5fd8;
+}
+
+.ka .productinfo .image.right {
+	float: right;
+	margin: 0 0 5px 5px;
+}
+
+.ka .productinfo .ctn {
+	font-size: 11px;
+	color: #5d6678;
+}
+
+.ka .productinfo .rating {
+	display: inline;
+}
+
+.ka .productinfo .price {
+	font-size: 18px;
+	color: #0e5fd8;
+	float: right;
+}
+
+/* -- Product info list */
+.ka .productinfo-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}	
+
+.ka .productinfo-list > li {
+	padding: 10px 0;
+}
+
+.ka .productinfo-list li + li {
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #ced0dd;
+	margin-top: 10px;
+	padding-top: 15px;
+}
+
+/* Content tags component */
+.ka .contenttags {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/icon_tag_grey_light.png) no-repeat scroll 0 center transparent;
+	padding: 0 25px;
+}
+
+/* Tag cloud component */
+.ka .tagcloud ul {
+	list-style: none;
+}
+
+.ka .tagcloud .tag:after {
+	content: ",";
+	color: #5d6678;
+	font-size: 11px;
+}
+
+.ka .tagcloud .tag:last-child:after {
+	content: "";
+}
+
+.ka .tagcloud .tag {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+.ka .tagcloud .count {
+	color: #5d6678;
+}
+
+.ka .tagcloud .popular 			{ font-size: 1.0em; }
+.ka .tagcloud .v-popular 		{ font-size: 1.2em; }
+.ka .tagcloud .vv-popular 		{ font-size: 1.4em; }
+.ka .tagcloud .vvv-popular 		{ font-size: 1.6em; }
+.ka .tagcloud .vvvv-popular 	{ font-size: 1.8em; }
+.ka .tagcloud .vvvvv-popular 	{ font-size: 2em;   }
+
+.ka .tagcloud-header {
+	font-weight: bold;
+}
+
+/* Tag cloud wrapper */
+.ka .tagclouds .tagcloud {
+	margin-bottom: 25px;
+}
+
+.ka .tagclouds-header {
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/icon_tag.png) no-repeat scroll 0 center transparent;
+	padding: 0 25px;
+}
+
+/* -- Recipe - Subcat/results page */
+.ka .reciperesults-header .count {
+	color: #5d6678;
+	font-size: 22px;
+}
+
+.ka .reciperesults-header .query {
+	font-weight: bold;
+}
+
+/* -- recipe tile item - fixed */
+.ka .reciperesult {
+	width: 204px;
+	overflow: hidden;
+	background-color: #f6f6f6;
+	padding: 8px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.4);
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.4);
+			box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.4);
+}
+
+.ka .reciperesult:hover {
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.5);
+	   -moz-box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.5);
+			box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.5);
+}
+
+.ka .reciperesult a,
+.ka .reciperesult a:visited,
+.ka .reciperesult a:hover,
+.ka .reciperesult a:active { 
+	color: #f56800; 
+}
+
+/* - use background images for < IE9 */
+.lt-ie9 .ka .reciperesult {
+	width: 230px;
+	margin: 0;
+	padding: 0;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipeitem_tile_bg.png) no-repeat scroll left bottom transparent;
+	padding-bottom: 16px;
+}
+
+.lt-ie9 .ka .reciperesult a {
+	display: block;
+	padding: 16px 14px 0 14px;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipeitem_tile_bg.png) no-repeat scroll 0 0 transparent;
+}
+
+.lt-ie9 .ka .reciperesult:hover,
+.lt-ie9 .ka .reciperesult:hover a {
+	background-image: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipeitem_tile_hover_bg.png);
+}
+
+.ka .reciperesult .image {
+	width: 204px;
+	height: 214px;
+	overflow: hidden;
+	position: relative;
+}
+
+.ka .reciperesult .header {
+	color: #f56800;
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 21px;
+	line-height: normal;
+	margin: 7px 0px;
+}
+
+/* -- variant: large */
+.ka .reciperesult-large {
+	width: 434px;
+}
+
+.ka .reciperesult-large .image {
+	width: 434px;
+}
+
+/* - use background images for < IE9 */
+.lt-ie9 .ka .reciperesult-large {
+	width: 460px;
+}
+
+.lt-ie9 .ka .reciperesult-large,
+.lt-ie9 .ka .reciperesult-large a {
+	background-image: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipeitem_tile_large_bg.png);
+}	
+
+.lt-ie9 .ka .reciperesult-large:hover,
+.lt-ie9 .ka .reciperesult-large:hover a {
+	background-image: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/recipeitem_tile_large_hover_bg.png);
+}
+
+/* -- recipe tile grid - fixed */
+.ka .reciperesults-grid {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	clear: both;
+	overflow: hidden;
+	width: 695px;
+	margin-left: -5px;
+	padding-top: 5px;
+}
+
+.ka .reciperesults-grid .reciperesult {
+	margin: 0 0 10px 10px;
+	float: left;
+}
+
+.lt-ie9 .ka .reciperesults-grid .reciperesult {
+	margin: 0px 0 0 0px;
+}	
+
+/* -- Recipeitems group */
+.ka .reciperesults-group {
+	margin-bottom: 10px;
+}
+
+.ka .reciperesults-group-header {
+	font-family: gs_light_regular, Verdana, Arial;
+	font-size: 24px;
+	line-height: normal;
+	color: #994100;
+}
+
+.ka .reciperesults-group-header .header {
+	display: inline;
+}
+
+.ka .reciperesults-group-header .image {
+	vertical-align: middle;
+	margin-bottom: 5px;
+}
+
+.ka .reciperesults-group-header .count {
+	color: #5d6678;
+	font-size: 18px;
+}
+
+.ka .reciperesults-group-viewmore {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+/* -- Carousel component */
+.ka .carousel {
+	position: relative;
+}
+
+.ka .carousel-content {
+	overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.ka .carousel-item {
+	top: 0;
+    left: 0;
+}
+
+.ka .carousel-nav {
+	position: absolute;
+	z-index: 20;
+	bottom: 10px;
+	right: 10px;
+}
+
+.ka .carousel-nav a {
+	float: left;
+	display: block;
+	height: 9px;
+	width: 9px;
+	margin-right: 6px;
+}
+
+/* -- Center carousel navigation */
+/* Javascript solution used for absolute/dynamic width centering, using class carousel-nav-center */
+.ka  .carousel-nav-center {
+	left: right;
+	right: auto;
+}
+
+/* -- Carousel navigation - Dotted skin */
+.ka .carousel-nav-dotted a {
+	display: block; 
+	border: 0; 
+	text-indent: -999em; 
+	overflow: hidden; 
+	background-color: transparent; 
+	background-repeat: no-repeat; 
+	text-align: left; 
+	direction: ltr; 
+	*line-height: 0;
+}
+
+.ka .carousel-nav-dotted a {
+	float: left;
+	display: block;
+	height: 9px;
+	width: 9px;
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/dot_grey.png) no-repeat scroll 0 0 transparent;
+	margin-right: 6px;
+}
+
+.ka .carousel-nav-dotted .active {
+	background: url(/etc/designs/ebazzarresp/pcarouselclientlibs/img/dot_green.png) no-repeat scroll 0 0 transparent;
+}
+
+.ka .carousel-nav-animated a {
+	display: block; 
+	text-indent: inherit; 
+	overflow: inherit;
+	background: none;
+	height: 12px;
+	width: 12px;
+	margin-right: 7px;
+}
+
+.ka .carousel-nav-animated .active {
+	background: none;
+}
+
+/* -- Recipe components */
+.ka .recipenutritions-horizontal > li {
+	display: inline;
+	margin-right: 15px;
+}
+
+.ka .recipenutritions .nutrition .label {
+	font-weight: bold;
+}
+
+.ka .recipenutritions .cals .label		{ color: #7dba00; }
+.ka .recipenutritions .prot .label		{ color: #f56800; }
+.ka .recipenutritions .fat .label		{ color: #863af9; }
+.ka .recipenutritions .satfat .label	{ color: #0e5fd8; }
+.ka .recipenutritions .carb .label		{ color: #ff3d3d; }
+.ka .recipenutritions .fib .label		{ color: #863af9; }
+
+.ka .recipeingredients {
+	list-style: disc;
+	list-style-position: outside;
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+}
+
+/* -- Recipedetails page */
+.ka .recipedetails {
+	position: relative;
+	color: #5d6678;
+	font-size: 12px;
+}
+
+.ka .recipedetails .mainheader {
+	width: 590px;
+}
+
+.ka .recipedetails .recipeimage {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.ka .recipedetails .recipeimage .button-prev,
+.ka .recipedetails .recipeimage .button-next {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -20px;
+}
+
+.ka .recipedetails .recipeimage .button-next {
+	left: auto;
+	right: 0;
+}	
+
+.ka .recipedetails .subheader {
+	font-size: 24px;
+	color: #993300;
+	font-family: gs_light_regular, Verdana, Arial;
+	line-height: normal;
+	margin-bottom: 10px;
+}
+
+.ka .recipedetails .recipeintro {
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.ka .recipedetails .recipeauthor {
+	overflow: hidden;
+	width: 175px;
+	font-size: 10px;
+	line-height: normal;
+	position: relative;
+}
+
+.ka .recipedetails .recipeauthor .image {
+	float: right;
+	margin-left: 8px;
+	height: 40px;
+	width: 40px;
+}
+
+.ka .recipedetails .recipeauthor .content {
+	position: absolute;
+	text-align: right;
+	bottom: 0;
+	right: 48px;
+}
+
+.ka .recipedetails .recipeauthor .author {
+	display: block;
+}
+
+.ka .recipedetails .recipeinfo,
+.ka .recipedetails .recipenutritions {
+	width: 480px;
+	display: block;
+	float: left;
+	margin-top: 5px;
+	font-size: 10px;
+	line-height: normal;
+}
+
+.ka .recipedetails .recipeauthor {
+	float: right;
+}
+
+.ka .recipedetails .recipeingredients {
+	margin-left: 40px;
+	margin-bottom: 25px;
+	font-size: 12px;
+}
+
+.ka .recipedetails .recipeingredients.cols2 {
+	overflow: hidden;
+}
+
+.ka .recipedetails .recipeingredients.cols2 > li {
+	width: 280px;
+	float: left;
+	margin-right: 30px;
+}
+
+.lt-ie8 .ka .recipedetails .recipeingredients.cols2 > li {
+	float: none;
+	width: auto;
+}
+
+.ka .recipedetails .recipeinstructions {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 25px;
+}
+
+.ka .recipedetails .recipeinstructions .step {
+	margin-bottom: 30px;
+}
+
+.ka .recipedetails .recipetags {
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.ka .recipedetails .contenttags {
+	float: right;
+}
+
+.ka .recipedetails .recipetools {
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.ka .recipedetails .btn-group {
+	float: left;
+}
+
+.ka .recipedetails .addthis {
+	float: right;
+}
+
+.ka .recipedetails .socialmedia-links.topright {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.ka .recipedetails .morerecipes {
+	margin-left: -20px;
+}
+
+.ka .recipedetails .recipes-grid {
+	margin: 0;
+}
+
+.ka .recipedetails .recipes-grid .recipe {
+	margin-left: 10px;
+}
+
+.ka .recipedetails .morerecipes .readmore {
+	float: right;
+	margin: 0 100px;
+}
+
+.ka .recipedetails .morerecipes .bottomright {
+	/* @TODO: get proper parsley from Design */
+}
+
+/* -- Product collection component */
+.ka .prodcollection .image {
+	display: block;
+	text-align: center;
+	height: 247px;
+	line-height: 247px;
+	overflow: hidden;
+	font-size: 0;
+}
+
+.ka .prodcollection .image img {
+	vertical-align: middle;
+}
+
+.ka .prodcollection .header {
+	font-family: gs_light_regular, Verdana, Arial;
+	line-height: 1.8em;
+	color: #315208;
+	font-size: 24px;
+	padding: 0 10px;
+}
+
+.ka .prodcollection .header,
+.ka .prodcollection .header a,
+.ka .prodcollection .header a:visited,
+.ka .prodcollection .header a:hover,
+.ka .prodcollection .header a:active {
+	font-family: gs_light_regular, Verdana, Arial;
+	line-height: 1.8em;
+	color: #315208;
+	font-size: 24px;
+}
+
+.ka .prodcollection .readmore {
+	font-family: gs_light_regular, Verdana, Arial;
+	line-height: normal;
+	font-size: 13px;
+}
+
+.ka .prodcollection .description {
+	color: #5d6678;
+	font-size: 13px;
+	margin: 20px 0 10px 0;
+	line-height: 24px;
+	padding: 0 5px;
+}
+
+/* -- Product collection - Color variations */
+/* Use !important here to avoid CSS rules (anchor) soup */
+.ka .prodcollection.robust .header,
+.ka .prodcollection.robust .header a 		{ color: #f58f08!important; }
+.ka .prodcollection.aluminium .header,
+.ka .prodcollection.aluminium .header a 	{ color: #5d6678!important; }
+.ka .prodcollection.avance .header,
+.ka .prodcollection.avance .header a 		{ color: #992c96!important; }
+.ka .prodcollection.viva .header,
+.ka .prodcollection.viva .header a 			{ color: #df2823!important; }
+.ka .prodcollection.daily .header,
+.ka .prodcollection.daily .header a 		{ color: #005aff!important; }
+.ka .prodcollection.essential .header,
+.ka .prodcollection.essential .header a 	{ color: #990033!important; }
+.ka .prodcollection.breakfast .header,
+.ka .prodcollection.breakfast .header a 	{ color: #993300!important; }
+.ka .prodcollection.remy .header a,
+.ka .prodcollection.remy .header 			{ color: #00a7bc!important; }
+
+/* -- Product collection - Button sub class */
+.ka .prodcollection-button .image {
+	height: 143px;
+	line-height: 143px;
+}
+
+.ka .prodcollection-button .header {
+	border-top: 2px solid #315208;
+}
+
+.ka .prodcollection-button.robust .header 		{ border-color: #f58f08; }
+.ka .prodcollection-button.aluminium .header 	{ border-color: #5d6678; } 
+.ka .prodcollection-button.avance .header 		{ border-color: #992c96; } 
+.ka .prodcollection-button.viva .header 		{ border-color: #df2823; } 
+.ka .prodcollection-button.daily .header 		{ border-color: #005aff; } 
+.ka .prodcollection-button.essential .header 	{ border-color: #990033; } 
+.ka .prodcollection-button.breakfast .header 	{ border-color: #993300; }
+.ka .prodcollection-button.remy .header 		{ border-color: #00a7bc; } 
+
+/* -- Product collection grid */
+.ka .prodcollections-grid {
+	margin: 0;
+	margin-left: -20px;
+	overflow: hidden;
+	padding: 0;
+	list-style-type: none;
+}
+
+.ka .prodcollections-grid .prodcollection {
+	float: left;
+  	margin: 0 0 50px 20px;
+  	width: 450px;	/* Default 2 cols */
+}
+
+.ka .prodcollections-grid.cols3 .prodcollection {
+  	width: 292px;
+}
+
+.ka .robustcollections-header {
+	font-family: gs_light_regular, Verdana, Arial;
+	line-height: normal;
+	color: #ff8600;
+	font-size: 22px;
+}
+
+.ka .othercollections-header {
+	font-family: gs_light_italic, Verdana, Arial;
+	line-height: normal;
+	color: #7cbd2a;
+	font-size: 26px;
+}

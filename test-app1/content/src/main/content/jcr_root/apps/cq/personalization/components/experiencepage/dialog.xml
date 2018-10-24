@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="520"
+    title="Properties"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic-tab
+                    jcr:primaryType="cq:Widget"
+                    title="Experience"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <main
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}false"
+                            collapsible="{Boolean}false"
+                            title=""
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    fieldLabel="Title"
+                                    inputType="text"
+                                    name="./jcr:title"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <description
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Description"
+                                    name="./jcr:description"
+                                    xtype="textarea"/>
+                            </items>
+                        </main>
+                        <segments
+                            jcr:primaryType="cq:Widget"
+                            collapsible="{Boolean}false"
+                            title="Segments"
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <panel-description
+                                    jcr:primaryType="cq:Widget"
+                                    cls="x-form-fieldset-description"
+                                    text="Specify the audience(s) which should receive this experience."
+                                    xtype="static"/>
+                                <segments
+                                    jcr:primaryType="cq:Widget"
+                                    hideLabel="{Boolean}true"
+                                    name="./cq:segments"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="nt:unstructured"
+                                        rootPath="/etc/segmentation"
+                                        xtype="pathfield"/>
+                                </segments>
+                                <segmentsHint
+                                    jcr:primaryType="cq:Widget"
+                                    ignoreData="{Boolean}true"
+                                    name="./cq:segments@TypeHint"
+                                    value="String[]"
+                                    xtype="hidden"/>
+                            </items>
+                        </segments>
+                    </items>
+                </basic-tab>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <cloudservices
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_cloudservices.infinity.json"
+                    xtype="cqinclude"/>
+                <blueprint-tab
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                    xtype="cqinclude"/>
+                <livecopy-tab
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

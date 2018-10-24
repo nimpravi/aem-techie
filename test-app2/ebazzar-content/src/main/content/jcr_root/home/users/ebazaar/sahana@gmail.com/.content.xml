@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    cq:lastModified="{Date}2014-03-17T10:22:03.363+05:30"
+    cq:lastModifiedBy="admin"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:User"
+    jcr:uuid="055a7b7a-2006-3dcb-b656-6801e54c7d7a"
+    rep:password="\{SHA-256}8f00dc9c15f0b56b-1000-4206d52201a15792288a2dac83cddc394b1c3a34cfb8ff252c663c218fec9261"
+    rep:principalName="sahana@gmail.com">
+    <preferences
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq:Preferences"/>
+    <profile
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/security/components/profile"
+        city="Bangalore"
+        email="sahana@gmail.com"
+        familyName="Rai"
+        gender="female"
+        givenName="Sahana">
+        <scoring/>
+        <segments/>
+    </profile>
+</jcr:root>

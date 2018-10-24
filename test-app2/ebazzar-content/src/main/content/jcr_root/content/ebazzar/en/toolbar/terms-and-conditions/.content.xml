@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-02-06T11:52:02.933+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2014-03-03T17:05:43.844+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/ebazaarresp/templates/contentpage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Terms and Conditions"
+        jcr:uuid="afc66e80-2647-4a74-ac26-2e37304b5830"
+        sling:resourceType="/apps/ebazaarresp/components/page/contentpage"
+        hideInNav="true">
+        <image
+            jcr:lastModified="{Date}2014-02-06T11:24:43.454+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <title
+                jcr:created="{Date}2014-02-06T11:51:28.629+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-06T11:51:28.629+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="geometrixx-outdoors/components/title"/>
+            <text
+                jcr:created="{Date}2014-02-06T11:43:58.808+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-06T11:52:02.923+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Please read the following terms and conditions very carefully as your use of service is subject to your acceptance of and compliance with the following terms and conditions (&amp;quot;Terms&amp;quot;).&lt;/b>&lt;/p>&#xa;&lt;p>By subscribing to or using any of our services you agree that you have read, understood and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services. These Terms and various other policies are binding as per the provisions of the &lt;i>Information Technology (Intermediaries guidelines) Rules, 2011 formulated under the Information Technology Act of &lt;/i>2000.&lt;/p>&#xa;&lt;p>In these Terms, references to &amp;quot;you&amp;quot;, &amp;quot;User&amp;quot; shall mean the end user accessing the Website, its contents and using the Services offered through the Website, &amp;quot;Service Providers&amp;quot; mean independent third party service providers, and &amp;quot;we&amp;quot;, &amp;quot;us&amp;quot; and &amp;quot;our&amp;quot; shall mean &lt;i>Vector E-commerce Private Limited&lt;/i> and its affiliates.&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>

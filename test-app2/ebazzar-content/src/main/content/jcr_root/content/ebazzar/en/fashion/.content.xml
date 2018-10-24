@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-03-13T18:02:02.444+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2014-03-18T14:20:47.977+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/ebazaarresp/templates/homepage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Fashion"
+        jcr:uuid="d3ed0cb4-bedb-4387-ac5a-ea29c351e4ff"
+        sling:resourceType="ebazaarresp/components/page/homepage">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <backgroundbanner
+                jcr:created="{Date}2014-02-26T12:01:00.607+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T15:29:27.811+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ebazaarresp/components/content/backgroundbanner">
+                <slides jcr:primaryType="nt:unstructured">
+                    <slide_1
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="http://www.philips.co.in/content/dam/corporate/homepage-articles/in/lighting-gateway-of-india/in_lighting-gateway-of-india_2014-01_large.jpg"
+                        title="Our Gift of Light to the people of Mumbai updated title"/>
+                    <slide_2
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="http://www.philips.co.in/content/dam/corporate/homepage-articles/master/DisneyLivingColors/Disney-LivingColors_BG.jpg"
+                        title="Philips brings the magic of Disney right into your&#xa;                                 home"/>
+                    <slide_3
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="http://www.philips.co.in/content/dam/corporate/homepage-articles/master/cardiovasc-disease-solutions/epiq-BG.jpg"
+                        title="Solutions for tackling cardiovascular disease unveiled&#xa;                                 at ESC Congress"/>
+                </slides>
+            </backgroundbanner>
+            <teaser_0
+                jcr:created="{Date}2014-02-19T16:04:54.471+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-24T11:52:28.612+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/personalization/components/teaser"
+                campaignpath="/content/campaigns/ebazzarresp/pagelist"
+                strategyPath="cq/personalization/clientlib/source/strategies/list/first.js"/>
+            <like_0
+                jcr:created="{Date}2014-03-05T16:14:25.055+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-03-05T16:14:25.055+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="social/plugins/facebook/like"/>
+            <carousel
+                jcr:created="{Date}2014-03-13T15:57:12.068+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-03-13T16:01:27.826+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ebazaarresp/components/content/carousel"
+                playDelay="0"
+                transTime="medium"
+                transType="slide">
+                <surveyset jcr:primaryType="nt:unstructured">
+                    <test_1
+                        jcr:primaryType="nt:unstructured"
+                        checkSymbol="true"
+                        description="banner description"
+                        descrPosition="Left"
+                        imageLink="/content/philips/en/philips-products"
+                        imagepath="/content/dam/philips/home_header_product1_228x403.png"
+                        linktext="more"
+                        linkURL="/content/fdg"/>
+                </surveyset>
+            </carousel>
+            <pcarousel
+                jcr:created="{Date}2014-03-13T15:55:18.235+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-03-13T15:56:49.199+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ebazaarresp/components/content/pcarousel">
+                <carousel jcr:primaryType="nt:unstructured">
+                    <banner_1
+                        jcr:primaryType="nt:unstructured"
+                        description="Hello 1"
+                        heroimage="/content/dam/philips/product_72x76.jpg"
+                        herolink="/content/dam/philips/product_100x100.jpg"
+                        linktext="know more"
+                        linkURL="/content/philips-product"
+                        subheader="sub header"
+                        subimage="/content/dam/philips/mario_banner_219x176.jpg"
+                        subtext="sub text"/>
+                </carousel>
+            </pcarousel>
+            <collapsibletestimage
+                jcr:created="{Date}2014-03-13T17:55:50.969+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-03-13T17:55:50.969+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ebazaarresp/components/content/collapsibletestimagecontainer">
+                <accordions
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys"/>
+            </collapsibletestimage>
+        </par>
+    </jcr:content>
+    <women/>
+    <men/>
+    <kids/>
+    <textimage---deal/>
+</jcr:root>

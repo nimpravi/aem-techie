@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/dam/eBazaar"/>
+    <filter root="/apps/ebazaarresp"/>
+    <filter root="/content/ebazzar"/>
+    <filter root="/content/philips"/>
+    <filter root="/etc/designs/philips_ver_2"/>
+    <filter root="/etc/designs/philips"/>
+    <filter root="/home/users/ebazaar"/>
+    <filter root="/content/campaigns/ebazzarresp"/>
+    <filter root="/content/campaigns/philips"/>
+    <filter root="/etc/segmentation/ebazarresp"/>
+    <filter root="/etc/designs/ebazzarresp"/>
+</workspaceFilter>

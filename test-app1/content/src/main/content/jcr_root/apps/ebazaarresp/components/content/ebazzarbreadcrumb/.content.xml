@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Component"
+    jcr:title="ebreadcrumb"
+    componentGroup=".hidden"
+    wikiLink="10.238.51.131/mediawiki/index.php?title=Ebazaar-breadcrumb"/>

@@ -1,0 +1,53 @@
+.ratings .empty {
+    background-image:url("../../../../../../etc/designs/social/rating/ratings_star_empty.png");
+}
+
+.ratings .full{
+    background-image:url("../../../../../../etc/designs/social/rating/ratings_star_full.png");
+}
+
+.ratings .selected {
+    background-image:url("../../../../../../etc/designs/social/rating/ratings_star_selected.png") !important;
+}
+
+
+.ratings-bar {
+    background-repeat:repeat-x;
+    height:16px;
+}
+
+.ratings-star {
+    float:left;
+    background-repeat:no-repeat;
+    height:16px;
+    width:16px;
+    cursor: pointer;
+}
+
+.ratings-star-displayOnly {
+    float:left;
+    background-repeat:no-repeat;
+    height:16px;
+    width:16px;
+}
+
+.ratings-bar.empty {
+    width:80px;
+}
+
+.ratings-bar.full {
+    width:0;
+}
+
+.ratings-bar.empty {
+    width:80px;
+}
+
+.ratings-text {
+    font-size: 10px;
+    color: #666666;
+}
+.ratings-star.selected {
+    width: 16px !important;
+    margin: 0px !important;
+}

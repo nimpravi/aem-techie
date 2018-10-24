@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    helpPath="en/cq/current/wcm/default_components.html#Image"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <advanced
+            jcr:primaryType="cq:Widget"
+            title="Product Details"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prodCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="i18n-product code"
+                    name="./prodCode"
+                    xtype="textfield"/>
+                <isRichTextFlag
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./textIsRich"
+                    value="true"
+                    xtype="hidden"/>
+                <prodTitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="i18n-product title"
+                    name="./prodTitle"
+                    xtype="textfield"/>
+                <prodDescription
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="i18n-product description"
+                    name="./prodDescription"
+                    xtype="textfield"/>
+                <prodPrice
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="i18n-product price"
+                    name="./prodPrice"
+                    xtype="textfield"/>
+                <prodOffer
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-pagelanguage"
+                    fieldDescription="percentage"
+                    fieldLabel="i18n-offer"
+                    name="./prodOffer"
+                    options="$PATH.metadata.json?nodeName=offers"
+                    type="select"
+                    xtype="selection"/>
+                <prodCategories
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-pagelanguage"
+                    fieldLabel="Product Type"
+                    name="./prodCategories"
+                    options="$PATH.metadata.json?nodeName=categories"
+                    type="select"
+                    xtype="selection"/>
+                <prodBrand
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-pagelanguage"
+                    fieldLabel="i18n-brand"
+                    name="./prodBrand"
+                    options="$PATH.metadata.json?nodeName=brands"
+                    type="select"
+                    xtype="selection"/>
+                <prodWeather
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-pagelanguage"
+                    fieldLabel="i18n-weather"
+                    name="./prodWeather"
+                    options="$PATH.metadata.json?nodeName=weathers"
+                    type="select"
+                    xtype="selection"/>
+                <prodStoreLoc
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Store Locator"
+                    name="./prodStoreLoc"
+                    xtype="textfield"/>
+            </items>
+        </advanced>
+        <image
+            jcr:primaryType="cq:Widget"
+            cropParameter="./imageCrop"
+            ddGroups="[media]"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            mapParameter="./imageMap"
+            name="./file"
+            requestSuffix=".img.png"
+            rotateParameter="./imageRotate"
+            title="Image"
+            xtype="smartimage"/>
+    </items>
+</jcr:root>

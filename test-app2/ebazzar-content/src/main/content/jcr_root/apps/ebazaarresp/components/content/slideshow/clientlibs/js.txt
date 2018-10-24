@@ -1,0 +1,7 @@
+#base=js
+
+Slideshow.js
+Slide.js
+SlidesPanel.js
+TitlePanel.js
+jquery.min.js

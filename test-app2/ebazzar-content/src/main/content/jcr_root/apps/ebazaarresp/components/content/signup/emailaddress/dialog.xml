@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        activeTab="0"
+        helpPath="en/cq/current/wcm/default_components.html#Forms Text Field"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <title
+                jcr:primaryType="nt:unstructured"
+                title="Title and Text"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./jcr:title"
+                        xtype="textfield"/>
+                    <hideTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hide Title"
+                        inputValue="true"
+                        name="./hideTitle"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./jcr:description"
+                        xtype="textfield"/>
+                    <readOnlyField
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Read Only"
+                        inputValue="true"
+                        name="./readOnlyField"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <helpText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Help text"
+                        name="./helpText"
+                        xtype="textfield"/>
+                    <hideHelpText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Hide help text"
+                        inputValue="true"
+                        name="./hideHelpText"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </title>
+            <constraints
+                jcr:primaryType="nt:unstructured"
+                title="Constraints"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <required
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="true"
+                        fieldLabel="Required"
+                        inputValue="true"
+                        name="./required"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <requiredMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required Message"
+                        name="./requiredMessage"
+                        xtype="textarea"/>
+                    <constraintType
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Constraint"
+                        name="./constraintType"
+                        options="/bin/wcm/foundation/forms/constraints.json"
+                        type="select"
+                        xtype="selection"/>
+                    <constraintMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Constraint Message"
+                        name="./constraintMessage"
+                        xtype="textarea"/>
+                    <maxLength
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="256"
+                        fieldLabel="Max Length of Email Address"
+                        name="./maxLength"
+                        xtype="textfield"/>
+                    <medymailErrorMessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Please remove medymail in your email address"
+                        fieldLabel="Medy Mail Error Message"
+                        name="./medymailerror"
+                        xtype="textfield"/>
+                    <maxLengthErrorMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Maximum Length Error Message"
+                        name="./maxLengthErrorMessage"
+                        xtype="textfield"/>
+                    <no_x0040_error
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Email doesn't have @"
+                        fieldLabel="@ Email Error"
+                        name="./attherateerror"
+                        xtype="textfield"/>
+                    <nodoterror
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Email doesn't have ."
+                        fieldLabel="Dot Email Error"
+                        name="./nodoterror"
+                        xtype="textfield"/>
+                </items>
+            </constraints>
+            <styling
+                jcr:primaryType="nt:unstructured"
+                title="Styling"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <multiLine
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Size"
+                        heightParameter="./rows"
+                        heightSuffix="rows"
+                        widthParameter="./cols"
+                        widthSuffix="cols"
+                        xtype="sizefield"/>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        anchor=""
+                        fieldLabel="Width"
+                        name="./width"
+                        width="48"
+                        xtype="textfield"/>
+                    <class
+                        jcr:primaryType="cq:Widget"
+                        anchor=""
+                        fieldLabel="CSS"
+                        name="./css"
+                        xtype="textfield"/>
+                    <errorLabelCSS
+                        jcr:primaryType="cq:Widget"
+                        anchor=""
+                        defaulValue="errorLabel"
+                        fieldLabel="Error Label CSS"
+                        name="./errorLabelCSS"
+                        xtype="textfield"/>
+                </items>
+            </styling>
+        </items>
+    </items>
+</jcr:root>

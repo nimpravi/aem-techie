@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Video Integeration"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <normal
+            jcr:primaryType="cq:Widget"
+            title="DAM Video"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <url
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Select the video URL"
+                    name="./url"
+                    xtype="pathfield"/>
+                <videoType
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Video Type"
+                    name="./videotype"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <normal
+                            jcr:primaryType="nt:unstructured"
+                            text="DAM video"
+                            value="normal"/>
+                        <kaltura
+                            jcr:primaryType="nt:unstructured"
+                            text="Kaltura Video"
+                            value="kaltura"/>
+                    </options>
+                </videoType>
+            </items>
+        </normal>
+        <kaltura
+            jcr:primaryType="cq:Widget"
+            title="Kaltura Video"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <entryId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Entry ID"
+                    name="./entryid"/>
+                <partnerId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Partner ID"
+                    name="./partnerid"/>
+                <playerId
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Player ID"
+                    name="./playerid"/>
+            </items>
+        </kaltura>
+    </items>
+</jcr:root>

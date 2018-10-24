@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Generic Search"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Generic Search">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <formTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title of the form"
+                        name="./formTitle"
+                        xtype="textfield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        baseName="multiFieldDetails_"
+                        fieldDescription="Click on '+' to add the field details"
+                        name="./fields"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <selection
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Select your choice"
+                                itemId="selection"
+                                name="./select"
+                                type="select"
+                                width="{Long}150"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <textField
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Text Field"
+                                        value="text"/>
+                                    <selectionField
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Selection Field"
+                                        value="selectionfield"/>
+                                    <checkbox
+                                        jcr:primaryType="cq:Widget"
+                                        text="Checkbox"
+                                        value="checkbox"/>
+                                    <calender
+                                        jcr:primaryType="cq:Widget"
+                                        text="Calender"
+                                        value="date"/>
+                                    <radio
+                                        jcr:primaryType="cq:Widget"
+                                        text="Radio"
+                                        value="radio"/>
+                                </options>
+                            </selection>
+                            <fieldLabel
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Field Label"
+                                itemId="fieldLabel"
+                                name="./fieldLabel"
+                                xtype="textfield"/>
+                            <fieldLabelDesc
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Field Label Description"
+                                itemId="fieldLabelDesc"
+                                name="./fieldLabelDesc"
+                                xtype="textfield"/>
+                            <fieldWidth
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Field Width"
+                                name="./fieldWidth"
+                                type="select"
+                                width="{Long}150"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <normal
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Normal"
+                                        value="form-control normal"/>
+                                    <medium
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Medium"
+                                        value="form-control medium"/>
+                                    <small
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Small"
+                                        value="form-control small"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionchanged="function(comp,object,value){&#xa;var panel = comp.findParentByType(&quot;panel&quot;); &#xa;var predictiveText=panel.getComponent(&quot;predictiveText&quot;); &#xa;var fieldQueryPara=panel.getComponent(&quot;fieldQueryPara&quot;);&#xa;var textFieldValues=panel.getComponent(&quot;textFieldValues&quot;);&#xa;var selectionOptions=panel.getComponent(&quot;selectionOptions&quot;);&#xa;var selection=panel.getComponent(&quot;selection&quot;).getValue();&#xa;var predictiveButton=panel.getComponent(&quot;predictiveButton&quot;);&#xa;var tableName=panel.getComponent(&quot;tableName&quot;);&#xa;if(object.toString()=='yes')&#xa;{&#xa;textFieldValues.hide();&#xa;selectionOptions.hide();&#xa;fieldQueryPara.show();&#xa;tableName.show();&#xa;predictiveText.show();&#xa;predictiveButton.show();&#xa;}&#xa;else if(object.toString()=='no')&#xa;{&#xa;predictiveButton.hide();&#xa;predictiveText.hide();&#xa;fieldQueryPara.hide();&#xa;tableName.hide();&#xa;if(selection==&quot;selectionfield&quot;)&#xa;{&#xa;selectionOptions.show();&#xa;}&#xa;else if(selection==&quot;textfield&quot;)&#xa;{&#xa;textFieldValues.show();&#xa;}&#xa;}&#xa;}"/>
+                            </fieldWidth>
+                            <addGroup
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Add to group?"
+                                itemId="addGroup"
+                                name="./addGroup"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionchanged="function(comp, val, isChecked) {&#xa;    var panel = comp.findParentByType(&quot;panel&quot;);&#xa;    var groupName = panel.getComponent(&quot;groupName&quot;); &#xa;alert(&quot;isChecked::&quot;+isChecked);&#xa;   &#xa;    isChecked ? groupName.show() : groupName.hide();&#xa;}"/>
+                            </addGroup>
+                            <groupName
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Group Name"
+                                hidden="{Boolean}true"
+                                itemId="groupName"
+                                name="./groupName"
+                                xtype="textfield"/>
+                            <predictive
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Is the field predictive?"
+                                itemId="predictive"
+                                name="./predictive"
+                                type="select"
+                                width="{Long}100"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <yes
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Yes"
+                                        value="yes"/>
+                                    <no
+                                        jcr:primaryType="nt:unstructured"
+                                        text="No"
+                                        value="no"/>
+                                </options>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionchanged="function(comp,object,value){&#xa;var panel = comp.findParentByType(&quot;panel&quot;); &#xa;var predictiveText=panel.getComponent(&quot;predictiveText&quot;); &#xa;var fieldQueryPara=panel.getComponent(&quot;fieldQueryPara&quot;);&#xa;var selectionOptions=panel.getComponent(&quot;selectionOptions&quot;);&#xa;var selection=panel.getComponent(&quot;selection&quot;).getValue();&#xa;var predictiveButton=panel.getComponent(&quot;predictiveButton&quot;);&#xa;var tableName=panel.getComponent(&quot;tableName&quot;);&#xa;if(object.toString()=='yes')&#xa;{&#xa;selectionOptions.hide();&#xa;fieldQueryPara.show();&#xa;tableName.show();&#xa;predictiveText.show();&#xa;predictiveButton.show();&#xa;}&#xa;else if(object.toString()=='no')&#xa;{&#xa;predictiveButton.hide();&#xa;predictiveText.hide();&#xa;fieldQueryPara.hide();&#xa;tableName.hide();&#xa;if(selection==&quot;selectionfield&quot;)&#xa;{&#xa;selectionOptions.show();&#xa;}&#xa;}&#xa;}"/>
+                            </predictive>
+                            <tableName
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Table Name"
+                                hidden="{Boolean}true"
+                                itemId="tableName"
+                                name="./tableName"
+                                xtype="textfield"/>
+                            <fieldQueryPara
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Field Query Parameter"
+                                hidden="{Boolean}true"
+                                itemId="fieldQueryPara"
+                                name="./fieldQueryPara"
+                                xtype="textfield"/>
+                            <predictiveText
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Predictive Text"
+                                hidden="{Boolean}true"
+                                itemId="predictiveText"
+                                name="./predictiveText"
+                                optionsRoot="doctorResults"
+                                optionsTextField="text"
+                                optionsValueField="value"
+                                type="select"
+                                xtype="selection"/>
+                            <selectionOptions
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Click on '+' to add the options"
+                                fieldLabel="Options for Selection field"
+                                hidden="{Boolean}true"
+                                itemId="selectionOptions"
+                                name="./selectionOptions"
+                                xtype="multifield">
+                                <fieldConfig jcr:primaryType="cq:Widget">
+                                    <optionsText
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Text/Value"
+                                        name="./optionsText"
+                                        xtype="textfield"/>
+                                </fieldConfig>
+                            </selectionOptions>
+                            <predictiveButton
+                                jcr:primaryType="cq:Widget"
+                                hidden="{Boolean}true"
+                                itemId="predictiveButton"
+                                name="./button"
+                                text="Click to get predictive results"
+                                xtype="button">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    click="function(comp,object,value){&#xa;alert(&quot;object::&quot;+object);&#xa;&#x9;&#x9;var panel = comp.findParentByType(&quot;panel&quot;); &#xa;&#x9;&#x9;var fieldQueryPara=panel.getComponent(&quot;fieldQueryPara&quot;).getValue();&#x9;&#x9;&#xa;&#x9;&#x9;var tableName=panel.getComponent(&quot;tableName&quot;).getValue();&#xa;&#xa;&#x9;&#x9;alert(&quot;fieldQueryPara :: &quot; + fieldQueryPara);&#xa;&#x9;&#x9;var requestType=&quot;predictivesearchresults&quot;;&#xa;&#x9;&#x9;alert(&quot;requestType::&quot;+requestType);&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;jQuery.ajax({&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;url : &quot;/bin/dbconnection&quot;,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;type : &quot;post&quot;,&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;data : &quot;v1=&quot; +fieldQueryPara+ &quot;&amp;v2=&quot; +tableName+ &quot;&amp;requestType=&quot; + $(&quot;#requestType&quot;).val(),&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;datatype : 'json',&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;success : function(data) &#xa;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var json = JSON.parse(data);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;alert(&quot;data:&quot; + data);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; var array =[];&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; jQuery.each(json,function(i, item) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var item =&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xa;&#x9;              &#x9;&#x9;&#x9;  &quot;text&quot;: json[i].text,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;value&quot;:json[i].text&#xa;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; array.push(item);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; });&#xa;          &#x9;&#x9;&#xa;&#x9;   alert(&quot;array:&quot;+array);&#xa;&#x9;   panel.getComponent(&quot;predictiveText&quot;).setOptions(array);&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;}"/>
+                            </predictiveButton>
+                        </fieldConfigs>
+                    </multi>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Widget"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./image/imageRotate"
+                sizeLimit="100"
+                title="Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

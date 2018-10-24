@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    cq:lastModified="{Date}2014-03-13T14:52:22.130+05:30"
+    cq:lastModifiedBy="admin"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:User"
+    jcr:uuid="677ce2eb-e30a-3e6b-b175-15cbaca784e1"
+    rep:password="\{SHA-256}9b44402b89a4ab79-1000-5cbc5e2715ef0fe1ada89bd029a8649e0ef14c8bd03a52367fd25850895679e0"
+    rep:principalName="cts@gmail.com">
+    <preferences
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq:Preferences"/>
+    <profile
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/security/components/profile"
+        email="cts@gmail.com"/>
+</jcr:root>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <aaron_commented_onshoe
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/activitystreams/components/activity"
+        content="Very formal and comfortable. Value for money"
+        created="1361348251436"
+        createdBy="aaron"
+        noCache="true"
+        title="\{createdBy} {verb}ed on Shoe"
+        verb="comment">
+        <objects0
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/activitystreams/components/activity/object"
+            link="/content/usergenerated/content/ebazaar/en/fashion/men/shoes/shoe/jcr:content/prodRatingsM2MTwMen/very_formal_and_comfortablevalueformoney"
+            type="collab/commons/components/ratings/rating"/>
+        <targets0
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/activitystreams/components/activity/target"
+            link="/content/ebazaar/en/fashion/men/shoes/shoe"
+            title="Shoe"
+            type="/apps/ebazaar/components/page/productdetailpage"/>
+    </aaron_commented_onshoe>
+    <aaron_commented_onshoe0
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/activitystreams/components/activity"
+        content="good collection"
+        created="1361349119258"
+        createdBy="aaron"
+        noCache="true"
+        title="\{createdBy} {verb}ed on Shoe"
+        verb="comment">
+        <objects0
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/activitystreams/components/activity/object"
+            link="/content/usergenerated/content/ebazaar/en/fashion/men/shoes/shoe/jcr:content/prodRatingsM4MFoMen/good_collection"
+            type="collab/commons/components/ratings/rating"/>
+        <targets0
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/activitystreams/components/activity/target"
+            link="/content/ebazaar/en/fashion/men/shoes/shoe"
+            title="Shoe"
+            type="/apps/ebazaar/components/page/productdetailpage"/>
+    </aaron_commented_onshoe0>
+    <aaron_commented_onshoe1
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/activitystreams/components/activity"
+        content="Excellent collection"
+        created="1361363823843"
+        createdBy="aaron"
+        noCache="true"
+        title="\{createdBy} {verb}ed on Shoe"
+        verb="comment">
+        <objects0
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/activitystreams/components/activity/object"
+            link="/content/usergenerated/content/ebazaar/en/fashion/men/shoes/shoe/jcr:content/prodRatingsM4MFoMen/excellent_collection"
+            type="collab/commons/components/ratings/rating"/>
+        <targets0
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/activitystreams/components/activity/target"
+            link="/content/ebazaar/en/fashion/men/shoes/shoe"
+            title="Shoe"
+            type="/apps/ebazaar/components/page/productdetailpage"/>
+    </aaron_commented_onshoe1>
+</jcr:root>

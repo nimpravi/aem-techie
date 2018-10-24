@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="520"
+    title="Properties"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <tab
+                    jcr:primaryType="cq:Widget"
+                    title="Campaign"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <main
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}false"
+                            collapsible="{Boolean}false"
+                            title=""
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="nt:unstructured"
+                                    allowBlank="false"
+                                    fieldLabel="Title"
+                                    inputType="text"
+                                    name="./jcr:title"
+                                    validateOnBlur="true"
+                                    xtype="textfield"/>
+                                <description
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Description"
+                                    name="./jcr:description"
+                                    xtype="textarea"/>
+                            </items>
+                        </main>
+                        <priority
+                            jcr:primaryType="cq:Widget"
+                            collapsible="{Boolean}false"
+                            title=""
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <priority
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="100"
+                                    fieldLabel="Priority"
+                                    name="./priority"
+                                    xtype="numberfield"/>
+                            </items>
+                        </priority>
+                        <onofftime
+                            jcr:primaryType="cq:Widget"
+                            cls="cq-propsdialog-set-onofftime"
+                            collapsible="{Boolean}false"
+                            title="On/Off Time"
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <panel-description
+                                    jcr:primaryType="cq:Widget"
+                                    cls="x-form-fieldset-description"
+                                    text="Times control when the campaign starts and ends."
+                                    xtype="static"/>
+                                <ontime
+                                    jcr:primaryType="cq:Widget"
+                                    ctCls="cq-propsdialog-ontime"
+                                    fieldLabel="On Time"
+                                    name="./onTime"
+                                    xtype="datetime"/>
+                                <offtime
+                                    jcr:primaryType="cq:Widget"
+                                    ctCls="cq-propsdialog-offtime"
+                                    fieldLabel="Off Time"
+                                    name="./offTime"
+                                    xtype="datetime"/>
+                                <ontime-hint
+                                    jcr:primaryType="cq:Widget"
+                                    ignoreData="{Boolean}true"
+                                    name="./onTime@TypeHint"
+                                    value="Date"
+                                    xtype="hidden"/>
+                                <offtime-hint
+                                    jcr:primaryType="cq:Widget"
+                                    ignoreData="{Boolean}true"
+                                    name="./offTime@TypeHint"
+                                    value="Date"
+                                    xtype="hidden"/>
+                            </items>
+                        </onofftime>
+                    </items>
+                </tab>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <cloudservices
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_cloudservices.infinity.json"
+                    xtype="cqinclude"/>
+                <target
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/cq/personalization/components/campaignpage/tab_target.infinity.json"
+                    xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

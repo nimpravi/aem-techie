@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2013-11-11T18:15:20.853+05:30"
+    jcr:createdBy="Jill"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Jill POST on Coffee Types"
+    sling:resourceType="granite/activitystreams/components/activity"
+    verb="POST">
+    <object
+        jcr:description=""
+        jcr:primaryType="nt:unstructured"
+        id="/content/usergenerated/content/demb/en/products/coffee/coffees/coffeetypes/jcr:content/prodRatingsM4FilThe/rating_1384173918751"
+        objectType="comment"
+        subType="collab/commons/components/ratings/rating"/>
+    <target
+        jcr:primaryType="nt:unstructured"
+        displayName="Coffee Types"
+        id="/content/demb/en/products/coffee/coffees/coffeetypes"
+        objectType="/apps/ebazaar/components/page/productdetailpage"/>
+</jcr:root>

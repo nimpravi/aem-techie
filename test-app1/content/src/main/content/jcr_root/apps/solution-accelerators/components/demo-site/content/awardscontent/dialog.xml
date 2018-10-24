@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Awards Content Tab"
+    width="100%"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <contentleft
+                jcr:primaryType="cq:Panel"
+                title="Content Tab">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <lhsrichtextfield
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldLabel="Content Text"
+                        maxLength="{Long}120"
+                        name="./lhsrichtextfield"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </lhsrichtextfield>
+                </items>
+            </contentleft>
+        </items>
+    </items>
+</jcr:root>

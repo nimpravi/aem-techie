@@ -1,0 +1,33 @@
+.cq-cc-campaign-prop a.label {
+	width: 125px;
+	display: inline-block;
+}
+
+.cq-cc-campaign-prop-button {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#cq-cc-store-warnings {
+	font-size: 12px;
+}
+
+.cq-cc-store-warning-sign {
+	display: inline-block;
+	width: 16px; /* match line height */
+	font-weight: bold;
+   	border-radius: 5px;
+   	border: 1px solid white;
+   	font-weight: bold;
+    background-color: #151515;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.cq-cc-campaign-prop a.label {
+	font-size: 12px;
+}
+
+.cq-cc-campaign-prop {
+	margin-bottom: 4px;
+}

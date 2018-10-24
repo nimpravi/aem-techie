@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-02-10T15:05:42.522+05:30"
+        cq:lastModifiedBy="admin"
+        cq:segments="[/etc/segmentation/ebazarresp/female]"
+        cq:template="/libs/cq/personalization/templates/teaser"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Female"
+        sling:resourceType="cq/personalization/components/teaserpage">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <heroimage
+                jcr:created="{Date}2014-02-10T15:04:58.076+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-10T15:05:42.518+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ebazaarresp/components/content/heroimage"
+                fileReference="/content/dam/eBazaar/Women_banner.jpg"
+                imageRotate="0"
+                linkURL="/content/ebazzar/en/fashion/women/wclothing"/>
+        </par>
+        <image
+            jcr:lastModified="{Date}2014-02-04T11:31:13.735+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>
