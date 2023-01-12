@@ -1,0 +1,1 @@
+java -debug -Xnoagent -Xmx1024m -XX:MaxPermSize=1024M -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -nofork
