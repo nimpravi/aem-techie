@@ -1,8 +1,0 @@
-.cq-cc-slider-profiledata {
-    position: absolute;
-}
-
-/* controlled from the profile data mgr*/
-.cq-cc-profile-not-anonymous, .cq-cc-profile-anonymous {
-    display: none;
-}
