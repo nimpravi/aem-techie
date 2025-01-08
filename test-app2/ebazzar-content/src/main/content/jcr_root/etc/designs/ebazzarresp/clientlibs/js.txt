@@ -1,8 +1,0 @@
-#base=js
-
-jquery-1.10.0.min.js
-bootstrap.min.js
-
-holder.js
-custom.js
-script.js

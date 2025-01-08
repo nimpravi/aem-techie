@@ -1,8 +1,0 @@
-#base=css
-
-bootstrap.min.css
-bootstrap-responsive.min.css
-font-awesome.min.css
-style.css
-
-ratings.css
